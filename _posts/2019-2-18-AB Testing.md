@@ -17,9 +17,9 @@ tags:
 
 
 
-$$click\_through\_ rate = \frac{number\ of\ clicks}{number\ of\ page\ views}  (measure\ the\ usability) $$
+$$\text{click~through~rate} = \frac{\text{number~of~clicks}}{\text{number~of~page~views}} (\text{measure~the~usability}) $$
 
-$$click\_through\_probability = \frac{unique\ visitors\ who\ click / unique}{unique\ visitors\ to\ page} (measure\ the\ total\ impact) $$
+$$\text{click~through~probability} = \frac{\text{unique~visitors~who~click}}{\text{unique~visitors~ to~page}} (\text{measure~the~total~impact}) $$
 
 
 
