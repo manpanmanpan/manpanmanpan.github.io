@@ -151,7 +151,6 @@ Achieves bias - variance trade-off.
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551515887(1).jpg?raw=true)
 
 Larger models always have a larger overall variance.
-
 Correct models are unbiased.
 
 For two correct models, the larger model tend to overfit the observed data. On the other hand, the larger models have larger overall variance and thus they have larger overall mean-squared-estimation-error (MSE).
