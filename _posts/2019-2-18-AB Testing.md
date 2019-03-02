@@ -15,9 +15,11 @@ tags:
 
 ### click_through_rate VS click_through Probability
 
+1
+
 $$X^2$$
 
-$$\text{click~through~rate} = \frac{\text{number~of~clicks}}{\text{number~of~page~views}} (\text{measure~the~usability}) $$
+$$\text{click through rate} = \frac{\text{number~of~clicks}}{\text{number~of~page~views}} (\text{measure~the~usability}) $$
 
 $$\text{click~through~probability} = \frac{\text{unique~visitors~who~click}}{\text{unique~visitors~ to~page}} (\text{measure~the~total~impact}) $$
 
