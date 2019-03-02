@@ -10,8 +10,6 @@ tags:
     - Regression
 ---
 
-[link]()
-
 #### 1. What is P-value?
 
 Assume that you observe a sample value, e.g. $\bar{x}$ = x, p value = probability under H<sub>0</sub> that you observe a sample as extreme as or more extreme than x.
