@@ -96,13 +96,13 @@ A strong regression relation neither implies ‘X causes Y’ nor implies ‘Y c
 Additional information, often through controlled experiments, is needed to draw cause-and-effect conclusions.
 
 #### 10. General Linear Regression Model
-$\Beta_k$ indicates the change in mean response with a unit increase in the predictor Xk, when all other predictors are held constant. This change is the same irrespective of all levels at which other predictors are held.
+$\beta_k$ indicates the change in mean response with a unit increase in the predictor Xk, when all other predictors are held constant. This change is the same irrespective of all levels at which other predictors are held.
 
 The effect of the predictor variables are addictive add together.
 Sometimes the effect of one predictor depends on the values of the other predictors.  Non-additive, interactive 
 
 For example, How education level affects income may depend on gender.
-If residual VS the interaction term X1X2 shows a clear linear pattern. This term should be included in the model. (plotting residuals against various interaction terms)
+If residual VS the interaction term $X_1X_2$ shows a clear linear pattern. This term should be included in the model. (plotting residuals against various interaction terms)
 
 #### 11. Multicollinearity 
 
@@ -122,7 +122,7 @@ A regression coefficient does not reflect any inherent effect of the correspondi
 
 Similarity, the reduction in the total variation in Y ascribed to an x variable must be interpreted as a marginal reduction given other x variables also included in the model.
 
-In practice, VIFk > 10 is often taken as an indicator that multicollinearity is high. The Kth diagonal element of the inverse correlation matrix Rxx is called the variance inflation factor (VIF) for $\beta_k$.
+In practice, VIFk > 10 is often taken as an indicator that multicollinearity is high. The $K_{th}$ diagonal element of the inverse correlation matrix $R_{xx}$ is called the variance inflation factor (VIF) for $\beta_k$.
 
 Forward stepwise procedure often works better than forward selection when there is high multicollinearity.
 
@@ -163,24 +163,16 @@ Under-fit models tend to underfit the observed data.
 MSE (total error) is an unbiased estimator of the error variance. (MSE = SSE/n-p)
 
 Criterion of model selection:
-
 R2
-
 Ra2
-
-Cp   (not far above p, smaller is better)
-
+Cp  (not far above p, smaller is better)
 AIC, BIC (smaller is better)
-
 Press (leave one out cross validation, smaller is better)
-
 press/n and MSPE are the measure of prediction ability of the model (out of sample)    
-
 MSPE based on the validation data is not much larger than SSE/n and press/n based on the training data indicates good predictive ability.
 Press not much larger than SSE means there is not severe overfitting by the model.
 
 Criterion of internal validation: SSE, Cp, Press
-
 Criterion of external validation: MSPE VS SSE/n , Press/n
 
 #### 15. Experimental design: Basic Principles 
@@ -222,5 +214,5 @@ To summarize, generally if the distribution of data is skewed to the left, the m
 
 #### 20. The benefits of a rolling or moving average compared to straight data
 
-rolling averages are a simple way to get rid of noise (e.g., randomness) out of the time series data. This comes at a price of a time lag in the rolling average reflecting significant trend changes.
+Rolling averages are a simple way to get rid of noise (e.g., randomness) out of the time series data. This comes at a price of a time lag in the rolling average reflecting significant trend changes.
 
