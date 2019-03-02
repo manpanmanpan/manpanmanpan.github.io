@@ -214,3 +214,16 @@ To summarize, generally if the distribution of data is skewed to the left, the m
 
 Rolling averages are a simple way to get rid of noise (e.g., randomness) out of the time series data. This comes at a price of a time lag in the rolling average reflecting significant trend changes.
 
+#### 21. Difference of AIC and BIC
+
+AIC and BIC are both penalized-likelihood criteria. Both are of the form “measure of fit + complexity penalty”:
+AIC = -2*ln(likelihood) + 2*p, and BIC = -2*ln(likelihood) + ln(N)*p,
+where p = number of estimated parameters, N = sample size.
+Both information criteria are sometimes used for choosing best predictor subsets in regression and often used for comparing nonnested models. When several groups are being compared, the best model is generally the one that minimizes both AIC and BIC. However, AIC is susceptible to overfitting the data, whereas BIC is susceptible to underfitting the data. The reason is that they penalize the free parameters differently, i.e., 2*p in AIC, ln(N)*p in BIC.
+
+AIC always has a chance of choosing too big a model, regardless of n. BIC has very little chance of choosing too big a model if n is sufficient, but it has a larger chance than AIC, for any given n, of choosing too small a model.
+
+#### 22. Standard Deviation vs Standard error
+
+The standard error (SE) of a statistic (usually an estimate of a parameter) is the standard deviation of its sampling distribution or an estimate of that standard deviation. 
+
