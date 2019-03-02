@@ -10,20 +10,8 @@ tags:
     - Regression
 ---
 
-# 
-
-## 
-
-### 
-
-
-
 [link]()
 
-
-
-
-![imagesda](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/avatar_g.jpg?raw=true)
 #### 1. What is P-value?
 Assume that you observe a sample value, e.g. $\bar{x}$ = x, p value = probability under H<sub>0</sub> that you observe a sample as extreme as or more extreme than x.
     what constitutes "extreme" depends on the alternative hypothesus.
@@ -41,6 +29,8 @@ Power is the probability of finding a difference between groups if one truly exi
 
 3.Least square principle is to fit the observed data by minimizing the sum of squared vertical deviations.
 
+4.
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551495156(1).jpg?raw=true)
 
 6.
 SSTO = SSR + SSE
@@ -112,7 +102,8 @@ A model that is underfit will have high training and high testing error while an
 14. Why Model selection ?
 Models with many X variables tend to have large sampling variability. They are also hard to maintain and interpret
 On the other hand, omission of key X variables leads to biased fitted regression functions and predictions.
-The goal of model selection is to choose a subset of X variables which balances between model variance and bias.      Achieves bias - variance trade-off.
+The goal of model selection is to choose a subset of X variables which balances between model variance and bias.      
+Achieves bias - variance trade-off.
 Bias - Variance Trade off (model selection)
 
 
