@@ -20,7 +20,7 @@ For instance p value = P( $\bar{x}$ >= x) if H<sub>1</sub> = u > u<sub>0
 P-value is the probability of obtaining a result at least as extreme as the current one, assuming that the null hypothesis is true.
 
 For example:
-Imagine we did a study comparing a placebo group to a group that received a new blood pressure medication and the mean blood pressure in the treatment group was 20 mm Hg lower than the placebo group. Assuming the null hypothesis is correct the p-value is the probability that if we repeated the study the observed difference between the group averages would be at least 20.
+Imagine we did a study comparing a placebo group to a group that received a new blood pressure medication and the mean blood pressure in the treatment group was 20 mm Hg lower than the placebo group. Assuming the null hypothesis is correct the pvalue is the probability that if we repeated the study the observed difference between the group averages would be at least 20.
 
 #### 2.  Power & Type 1 error & Type 2 error
 
@@ -69,20 +69,19 @@ Confidence interval provides a range of values which is likely to contain the po
 We have 95% confident that the true value is between [L,R]
 
 #### 8. Model diagnostics
-Assumptions of the simple linear model with normal errors:
-Linearity of the regression relation  (residual vs predictor variables plot)
+##### Assumptions of the simple linear model with normal errors:
+######  Linearity of the regression relation  (residual vs predictor variables plot)
 
-Normality of the error terms  (QQ plot)
+###### Normality of the error terms  (QQ plot)
 
-Constant variance of error terms
+###### Constant variance of error terms
  ( if the residual vs predictor variable plot (or residual vs fitted value plot) shows unequal dispersion along the horizontal xi_s, then this is an indicator of unequal variance)
 
 TESTS OF EQUAL VARIANCE ( Hartley Test, Brown-Forsythe Test, Bartlett Test)
 
 Unequal error variance remedial measures: Transformation of observation variable Y, ex, BOX-COX procedure; Weighted least squares.
 
-Independence of the error terms  
-
+###### Independence of the error terms  
 (if measurements are obtained in a time/space sequence, a residual sequence plot can be used to check whether the error terms are serially correlated)
 
 #### 9. Regression and Causation 
@@ -110,7 +109,7 @@ With Multicollinearity, the estimated regression coefficients tend to have infla
 
  (2) It’s possible that none of the regression coefficients is statistically significant, but at the same time there is a significant regression relation between the response variable and the entire set of x variables.
 
-In the present of multicollinearity:
+###### In the present of multicollinearity:
 The regression coefficient of an x variable depends on which other x variables are also in the model.
 
 A regression coefficient does not reflect any inherent effect of the corresponding x variables on the response variable, but only a marginal effect given whatever other x variables are also in the model.
