@@ -20,25 +20,23 @@ For instance p value = P( $\bar{x}$ >= x) if H<sub>1</sub> = u > u<sub>0
 P-value is the probability of obtaining a result at least as extreme as the current one, assuming that the null hypothesis is true.
 
 For example:
-
 Imagine we did a study comparing a placebo group to a group that received a new blood pressure medication and the mean blood pressure in the treatment group was 20 mm Hg lower than the placebo group. Assuming the null hypothesis is correct the p-value is the probability that if we repeated the study the observed difference between the group averages would be at least 20.
 
-#### 2.  
+#### 2.  Power & Type 1 error & Type 2 error
 
 Type 1 Error = incorrectly rejecting the null hypothesis.
 Type 2 Error = fail to reject null when you should have rejected the null hypothesis.
 
 Power is the probability of finding a difference between groups if one truly exists. It is the percentage chance that you will be able to reject the null hypothesis if it is really false.
 
-#### 3.
+#### 3. Least Square Principle 
 
 Least square principle is to fit the observed data by minimizing the sum of squared vertical deviations.
 
-#### 4.
-
+#### 4. Residuals
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551495156(1).jpg?raw=true)
 
-#### 5. 
+#### 5. SSTO &  SSR &  SSE
 SSTO = SSR + SSE
 
 Total deviations  (the variation of the observed Yi around their sample mean) can be decomposed into the sum of two items: 
@@ -50,20 +48,20 @@ Is the effect of X in reducing the variation in Y through linear regression.
 
 SSR is the reduction in uncertainty in predicting Y by utilizing the predictor X through a linear regression model.
 
-#### 6.
-R2 = SSR/SSTO = 1 - SSE/SSTO
+#### 6. $R^2$  &  $R_a^2$
+$R^2$ = SSR/SSTO = 1 - SSE/SSTO
 
-R2 is the proportional reduction of the total variation in Y by explaining Y using X through a linear regression model.
+$R^2$ is the proportional reduction of the total variation in Y by explaining Y using X through a linear regression model.
 
-For example: R2 = .209 ( y child’s height, x parents’ height )
+For example: $R^2$ = .209 ( y child’s height, x parents’ height )
 20% of variation in child’s height may be explained by the variation in parents’ height.
 
-Sometimes, nonlinearity pattern shows larger R2 .
-Adding more X variables to the model will always increase R2.
+Sometimes, nonlinearity pattern shows larger $R^2$ .
+Adding more X variables to the model will always increase $R^2$.
 
-Ra2 = 1 - MSE/MSTO = 1 - n-1/n-p * SSE/SSTO  <= R2
+$R_a^2$ = 1 - MSE/MSTO = 1 - n-1/n-p * SSE/SSTO  <= $R^2$
 
-Ra2 may become decrease when adding more X variables into the model because the decrease in SSE may be more than offset by the loose of degrees of freedom in SSE.
+$R_a^2$ may become decrease when adding more X variables into the model because the decrease in SSE may be more than offset by the loose of degrees of freedom in SSE.
 
 #### 7. Confidence Interval Interpretation
 Confidence interval provides a range of values which is likely to contain the population parameter of interest.
@@ -108,12 +106,11 @@ Multicollinearity doesn’t prevent us from getting a good fit of the data.
 
 With Multicollinearity, the estimated regression coefficients tend to have inflated sampling variability (larger standard errors). This leads to:
 
- Wide confidence intervals
+ (1) Wide confidence intervals
 
-It’s possible that none of the regression coefficients is statistically significant, but at the same time there is a significant regression relation between the response variable and the entire set of x variables.
+ (2) It’s possible that none of the regression coefficients is statistically significant, but at the same time there is a significant regression relation between the response variable and the entire set of x variables.
 
 In the present of multicollinearity:
-
 The regression coefficient of an x variable depends on which other x variables are also in the model.
 
 A regression coefficient does not reflect any inherent effect of the corresponding x variables on the response variable, but only a marginal effect given whatever other x variables are also in the model.
@@ -126,7 +123,7 @@ Forward stepwise procedure often works better than forward selection when there 
 
 Multicollinearity remedial measures: Ridge regression 
 
-#### 12. 
+#### 12. T Test in general linear regression
 
 From the general linear test perspective, each T test is a marginal test, testing whether the marginal effect of an X variable is significant given all other X variables being included in the model.
 
