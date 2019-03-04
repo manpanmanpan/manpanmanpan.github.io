@@ -12,7 +12,6 @@ tags:
 
 ### Q1: You are a DS and you track the metric “# of job views” each week. Last week the metric went down by 20%, how will you investigate this drop?
 
-Brainstorm
 When we come to the question, we should have a clear definition of the metric '# of job views', then consider how to get to the metric from the user's perspective. 
 
 Considering that you are a job seeker, you should do job search, then you get some results in some order after your quarry, then you click some jobs you are interested in. Finally, we will get the number of job views. 
