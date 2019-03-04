@@ -142,6 +142,8 @@ On the other hand, omission of key X variables leads to biased fitted regression
 The goal of model selection is to choose a subset of X variables which balances between model variance and bias.      
 Achieves bias - variance trade-off.
 ##### Bias - Variance Trade off (model selection)
+[Balancing Bias and Variance](https://towardsdatascience.com/balancing-bias-and-variance-to-control-errors-in-machine-learning-16ced95724db)
+
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551515803(1).jpg?raw=true)
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551515887(1).jpg?raw=true)
@@ -151,9 +153,10 @@ Correct models are unbiased.
 
 For two correct models, the larger model tend to overfit the observed data. On the other hand, the larger models have larger overall variance and thus they have larger overall mean-squared-estimation-error (MSE).
 
-Under-fit models tend to underfit the observed data.
-
 MSE (total error) is an unbiased estimator of the error variance. (MSE = SSE/n-p)
+
+##### variance
+Variance refers to the amount by which your estimate of f(X) would change if we estimated it using a different training data set. Since the training data is used to ﬁt the statistical learning method, diﬀerent training data sets will result in a diﬀerent estimation.
 
 Criterion of model selection:
 $R^2$
@@ -189,7 +192,10 @@ Consider a researcher attempting to assess the effectiveness of drug X, from pop
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551515922(1).jpg?raw=true)
 
-研究扁平化字体和衬线体字体对阅读速度的影响。这里有个混杂变量（confounding variable）就是人群的文化程度。为了消除它的影响，1 随机取样一些人，把他们按照文化水平分两拨，2 随机分配到两种字体。
+For another example, we want to explore the impact of A font / B font to reading speed. There is a confounding variable : the education level of crowd.
+In order to get rid of that influence:
+1. Randomly sample some people, divide them into two groups according to the level of education (blocking)
+2. Randomly assign them to two types of fonts.
 
 #### 17. Selection bias
 
@@ -241,9 +247,44 @@ For such problems, a slight variation in the K Fold cross validation technique i
 - Leave-P-Out Cross Validation
 This approach leaves p data points out of training data, i.e. if there are n data points in the original sample then, n-p samples are used to train the model and p points are used as the validation set. This is repeated for all combinations in which original sample can be separated this way, and then the error is averaged for all trials,to give overall effectiveness.
 
-This method is exhaustive in the sense that it needs to train and validate the model for all possible combinations, and for moderately large p, it can become computationally infeasible.
 
-So we always let p = 1. This is known as Leave one out cross validation. This case, the number of possible combinations is equal to number of data points in original sample or n.
+   This method is exhaustive in the sense that it needs to train and validate the model for all possible combinations, and for moderately large p, it can become computationally infeasible.
+
+
+   So we always let p = 1. This is known as Leave one out cross validation. This case, the number of possible combinations is equal to number of data points in original sample or n.
 
 #####Regularization
+Regularization, significantly reduces the variance of the model, without substantial increase in its bias.
 
+[Regularization](https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a)
+
+This is a form of regression, that constrains/ regularizes or shrinks the coefficient estimates towards zero. In other words, this technique discourages learning a more complex or flexible model, so as to avoid the risk of overfitting.
+
+- Ridge Regression (L2 norm)
+$$ \sum_{i=1}^n (y_i - \beta_0 - \sum_{j=1}^p\beta_jX_{ij})^2 + \lambda\sum_{j=1}^p\beta_j^2$$
+
+  The coefficients are estimated by minimizing this function. Here, λ is the tuning parameter that decides how much we want to penalize the flexibility of our model. We shrink the estimated association of each variable with the response, except the intercept β0, This intercept is a measure of the mean value of the response when $x_{i1} = x_{i2} = …= x_{ip} = 0$.
+
+  When λ = 0, the penalty term has no eﬀect, and the estimates produced by ridge regression will be equal to least squares. However, as λ→∞, the impact of the shrinkage penalty grows, and the ridge regression coeﬃcient estimates will approach zero.
+
+  We need to standardize the predictors or bring the predictors to the same scale before performing ridge regression.
+
+  Disadvantage of ridge regression, which is model interpretability. It will shrink the coefficients for least important predictors, very close to zero. But it will never make them exactly zero. In other words, the final model will include all predictors. 
+
+- Lasso (L1 norm)
+$$ \sum_{i=1}^n (y_i - \beta_0 - \sum_{j=1}^p\beta_jX_{ij})^2 + \lambda\sum_{j=1}^p|\beta_j|$$
+
+  This variation differs from ridge regression only in penalizing the high coefficients.
+
+- Constraint functions
+Consider their are 2 parameters in a given problem. Then according to above formulation, the ridge regression is expressed by $β_1² + β_2² ≤ S$. This implies that ridge regression coefficients have the smallest RSS(loss function) for all points that lie within the circle given by $β_1² + β_2² ≤ S$.
+
+  Similarly, for lasso, the equation becomes,$|β_1|+|β_2|≤ S$. This implies that lasso coefficients have the smallest RSS(loss function) for all points that lie within the diamond given by $|β_1|+|β_2|≤ S$.
+
+  ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551741185(1).jpg?raw=true)
+
+  The above image shows the constraint functions(green areas), for lasso(left) and ridge regression(right), along with contours for RSS(red ellipse).
+
+    Since ridge regression has a circular constraint with no sharp points, this intersection will not generally occur on an axis, and so the ridge regression coeﬃcient estimates will be exclusively non-zero. However, the lasso constraint has corners at each of the axes, and so the ellipse will often intersect the constraint region at an axis. When this occurs, one of the coeﬃcients will equal zero. In higher dimensions(where parameters are much more than 2), many of the coeﬃcient estimates may equal zero simultaneously.
+
+    The tuning parameter $\lambda$, used in the regularization techniques described above, controls the impact on bias and variance. As the value of $\lambda$ rises, it reduces the value of coefficients and thus reducing the variance. Till a point, this increase in $\lambda$ is beneficial as it is only reducing the variance(hence avoiding overfitting), without loosing any important properties in the data. But after certain value, the model starts loosing important properties, giving rise to bias in the model and thus underfitting. Therefore, the value of $\lambda$ should be carefully selected.
