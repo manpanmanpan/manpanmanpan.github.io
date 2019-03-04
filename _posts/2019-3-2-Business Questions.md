@@ -10,7 +10,7 @@ tags:
     - Business
 ---
 
-##### You are a DS and you track the metric “# of job views” each week. Last week the metric went down by 20%, how will you investigate this drop?
+### Q1: You are a DS and you track the metric “# of job views” each week. Last week the metric went down by 20%, how will you investigate this drop?
 
 Brainstorm
 When we come to the question, we should have a clear definition of the metric '# of job views', then consider how to get to the metric from the user's perspective. 
