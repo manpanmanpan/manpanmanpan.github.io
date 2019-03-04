@@ -156,8 +156,8 @@ Under-fit models tend to underfit the observed data.
 MSE (total error) is an unbiased estimator of the error variance. (MSE = SSE/n-p)
 
 Criterion of model selection:
-R2
-Ra2
+$R^2$
+$R_a^2$
 Cp  (not far above p, smaller is better)
 AIC, BIC (smaller is better)
 Press (leave one out cross validation, smaller is better)
@@ -221,4 +221,29 @@ AIC always has a chance of choosing too big a model, regardless of n. BIC has ve
 #### 22. Standard Deviation vs Standard error
 
 The standard error (SE) of a statistic (usually an estimate of a parameter) is the standard deviation of its sampling distribution or an estimate of that standard deviation. 
+
+#### 23. Overfitting
+
+#####Cross Validation
+- Holdout Method
+Removing a part of the training data and using it to get predictions from the model trained on rest of the data.
+It still suffers from issues of high variance. This is because it is not certain which data points will end up in the validation set and the result might be entirely different for different sets.
+
+- K-Fold Cross Validation
+In K Fold cross validation, the data is divided into k subsets. Now the holdout method is repeated k times, such that each time, one of the k subsets is used as the test set/ validation set and the other k-1 subsets are put together to form a training set. The error estimation is averaged over all k trials to get total effectiveness of our model. As can be seen, every data point gets to be in a validation set exactly once, and gets to be in a training set k-1 times. This significantly reduces bias as we are using most of the data for fitting, and also significantly reduces variance as most of the data is also being used in validation set.As a general rule and empirical evidence, K = 5 or 10 is generally preferred.
+
+- Stratified K-Fold Cross Validation
+In some cases, a large imbalance in the response variables. 
+For example, in dataset concerning price of houses, there might be large number of houses having high price. 
+Or in case of classification, there might be several times more negative samples than positive samples. 
+For such problems, a slight variation in the K Fold cross validation technique is made, such that each fold contains approximately the same percentage of samples of each target class as the complete set, or in case of prediction problems, the mean response value is approximately equal in all the folds. This variation is also known as Stratified K Fold.
+
+- Leave-P-Out Cross Validation
+This approach leaves p data points out of training data, i.e. if there are n data points in the original sample then, n-p samples are used to train the model and p points are used as the validation set. This is repeated for all combinations in which original sample can be separated this way, and then the error is averaged for all trials,to give overall effectiveness.
+
+This method is exhaustive in the sense that it needs to train and validate the model for all possible combinations, and for moderately large p, it can become computationally infeasible.
+
+So we always let p = 1. This is known as Leave one out cross validation. This case, the number of possible combinations is equal to number of data points in original sample or n.
+
+#####Regularization
 
