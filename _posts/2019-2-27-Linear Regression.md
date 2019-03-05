@@ -288,8 +288,8 @@ This variation differs from ridge regression only in penalizing the high coeffic
 Consider their are 2 parameters in a given problem. Then according to above formulation, the ridge regression is expressed by $β_1² + β_2² ≤ S$. This implies that ridge regression coefficients have the smallest RSS(loss function) for all points that lie within the circle given by $β_1² + β_2² ≤ S$.
 
 
-Similarly, for lasso, the equation becomes,$|β_1|+|β_2|≤ S$.
-This implies that lasso coefficients have the smallest RSS(loss function) for all points that lie within the diamond given by $|β_1|+|β_2|≤ S$.
+Similarly, for lasso, the equation becomes,$\|β_1\|+\|β_2\|≤ S$.
+This implies that lasso coefficients have the smallest RSS(loss function) for all points that lie within the diamond given by $\|β_1\|+\|β_2\|≤ S$.
 
 
 
