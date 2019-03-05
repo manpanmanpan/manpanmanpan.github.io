@@ -231,6 +231,7 @@ The standard error (SE) of a statistic (usually an estimate of a parameter) is t
 #### 23. Overfitting
 
 #####Cross Validation
+
 - Holdout Method
 Removing a part of the training data and using it to get predictions from the model trained on rest of the data.
 It still suffers from issues of high variance. This is because it is not certain which data points will end up in the validation set and the result might be entirely different for different sets.
@@ -254,6 +255,7 @@ This approach leaves p data points out of training data, i.e. if there are n dat
    So we always let p = 1. This is known as Leave one out cross validation. This case, the number of possible combinations is equal to number of data points in original sample or n.
 
 #####Regularization
+
 Regularization, significantly reduces the variance of the model, without substantial increase in its bias.
 
 [Regularization](https://towardsdatascience.com/regularization-in-machine-learning-76441ddcf99a)
@@ -261,30 +263,41 @@ Regularization, significantly reduces the variance of the model, without substan
 This is a form of regression, that constrains/ regularizes or shrinks the coefficient estimates towards zero. In other words, this technique discourages learning a more complex or flexible model, so as to avoid the risk of overfitting.
 
 - Ridge Regression (L2 norm)
+
 $$ \sum_{i=1}^n (y_i - \beta_0 - \sum_{j=1}^p\beta_jX_{ij})^2 + \lambda\sum_{j=1}^p\beta_j^2$$
 
   The coefficients are estimated by minimizing this function. Here, λ is the tuning parameter that decides how much we want to penalize the flexibility of our model. We shrink the estimated association of each variable with the response, except the intercept β0, This intercept is a measure of the mean value of the response when $x_{i1} = x_{i2} = …= x_{ip} = 0$.
 
+
   When λ = 0, the penalty term has no eﬀect, and the estimates produced by ridge regression will be equal to least squares. However, as λ→∞, the impact of the shrinkage penalty grows, and the ridge regression coeﬃcient estimates will approach zero.
 
+
   We need to standardize the predictors or bring the predictors to the same scale before performing ridge regression.
+
 
   Disadvantage of ridge regression, which is model interpretability. It will shrink the coefficients for least important predictors, very close to zero. But it will never make them exactly zero. In other words, the final model will include all predictors. 
 
 - Lasso (L1 norm)
+
 $$ \sum_{i=1}^n (y_i - \beta_0 - \sum_{j=1}^p\beta_jX_{ij})^2 + \lambda\sum_{j=1}^p|\beta_j|$$
 
-  This variation differs from ridge regression only in penalizing the high coefficients.
+This variation differs from ridge regression only in penalizing the high coefficients.
 
 - Constraint functions
+
 Consider their are 2 parameters in a given problem. Then according to above formulation, the ridge regression is expressed by $β_1² + β_2² ≤ S$. This implies that ridge regression coefficients have the smallest RSS(loss function) for all points that lie within the circle given by $β_1² + β_2² ≤ S$.
 
-  Similarly, for lasso, the equation becomes,$|β_1|+|β_2|≤ S$. This implies that lasso coefficients have the smallest RSS(loss function) for all points that lie within the diamond given by $|β_1|+|β_2|≤ S$.
 
-  ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551741185(1).jpg?raw=true)
+Similarly, for lasso, the equation becomes,$|β_1|+|β_2|≤ S$. This implies that lasso coefficients have the smallest RSS(loss function) for all points that lie within the diamond given by $|β_1|+|β_2|≤ S$.
 
-  The above image shows the constraint functions(green areas), for lasso(left) and ridge regression(right), along with contours for RSS(red ellipse).
 
-    Since ridge regression has a circular constraint with no sharp points, this intersection will not generally occur on an axis, and so the ridge regression coeﬃcient estimates will be exclusively non-zero. However, the lasso constraint has corners at each of the axes, and so the ellipse will often intersect the constraint region at an axis. When this occurs, one of the coeﬃcients will equal zero. In higher dimensions(where parameters are much more than 2), many of the coeﬃcient estimates may equal zero simultaneously.
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551741185(1).jpg?raw=true)
 
-    The tuning parameter $\lambda$, used in the regularization techniques described above, controls the impact on bias and variance. As the value of $\lambda$ rises, it reduces the value of coefficients and thus reducing the variance. Till a point, this increase in $\lambda$ is beneficial as it is only reducing the variance(hence avoiding overfitting), without loosing any important properties in the data. But after certain value, the model starts loosing important properties, giving rise to bias in the model and thus underfitting. Therefore, the value of $\lambda$ should be carefully selected.
+
+The above image shows the constraint functions(green areas), for lasso(left) and ridge regression(right), along with contours for RSS(red ellipse).
+
+
+Since ridge regression has a circular constraint with no sharp points, this intersection will not generally occur on an axis, and so the ridge regression coeﬃcient estimates will be exclusively non-zero. However, the lasso constraint has corners at each of the axes, and so the ellipse will often intersect the constraint region at an axis. When this occurs, one of the coeﬃcients will equal zero. In higher dimensions(where parameters are much more than 2), many of the coeﬃcient estimates may equal zero simultaneously.
+
+
+The tuning parameter $\lambda$, used in the regularization techniques described above, controls the impact on bias and variance. As the value of $\lambda$ rises, it reduces the value of coefficients and thus reducing the variance. Till a point, this increase in $\lambda$ is beneficial as it is only reducing the variance(hence avoiding overfitting), without loosing any important properties in the data. But after certain value, the model starts loosing important properties, giving rise to bias in the model and thus underfitting. Therefore, the value of $\lambda$ should be carefully selected.
