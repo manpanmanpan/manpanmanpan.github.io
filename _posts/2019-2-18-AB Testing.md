@@ -24,19 +24,19 @@ $$\text{click~through~probability} = \frac{\text{unique~visitors~who~click}}{\te
 
 - Sums and Counts 
 
-e.g:  # users who visited page
+  e.g:  # users who visited page
 
 - Means, Medians and Percentiles
 
-e.g: mean age of users who completed a course or median latency of page load
+  e.g: mean age of users who completed a course or median latency of page load
 
 - Probabilities and Rates
 
-e.g: Probability has 0 or 1 outcome in each case , Rate has 0 or more
+  e.g: Probability has 0 or 1 outcome in each case , Rate has 0 or more
 
 - Ratios
 
-e.g: $\frac{P(revenue - generating~click)}{P(any~click)}$
+  e.g: $\frac{P(revenue - generating~click)}{P(any~click)}$
 
 
 
