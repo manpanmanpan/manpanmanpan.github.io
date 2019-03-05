@@ -230,7 +230,7 @@ The standard error (SE) of a statistic (usually an estimate of a parameter) is t
 
 #### 23. Overfitting
 
-#####Cross Validation
+#### Cross Validation
 
 - Holdout Method
 Removing a part of the training data and using it to get predictions from the model trained on rest of the data.
@@ -254,7 +254,7 @@ This approach leaves p data points out of training data, i.e. if there are n dat
 
    So we always let p = 1. This is known as Leave one out cross validation. This case, the number of possible combinations is equal to number of data points in original sample or n.
 
-#####Regularization
+#### Regularization
 
 Regularization, significantly reduces the variance of the model, without substantial increase in its bias.
 
@@ -288,7 +288,9 @@ This variation differs from ridge regression only in penalizing the high coeffic
 Consider their are 2 parameters in a given problem. Then according to above formulation, the ridge regression is expressed by $β_1² + β_2² ≤ S$. This implies that ridge regression coefficients have the smallest RSS(loss function) for all points that lie within the circle given by $β_1² + β_2² ≤ S$.
 
 
-Similarly, for lasso, the equation becomes,$|β_1|+|β_2|≤ S$. This implies that lasso coefficients have the smallest RSS(loss function) for all points that lie within the diamond given by $|β_1|+|β_2|≤ S$.
+Similarly, for lasso, the equation becomes,$|β_1|+|β_2|≤ S$.
+This implies that lasso coefficients have the smallest RSS(loss function) for all points that lie within the diamond given by $|β_1|+|β_2|≤ S$.
+
 
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551741185(1).jpg?raw=true)
