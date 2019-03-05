@@ -7,7 +7,7 @@ author:     Cassie Pan
 header-img: img/post-bg-ios9-web.jpg
 catalog: true
 tags:
-    - Regression
+    - Regression, Regularization, AIC / BIC, Overfitting, Underfitting, P value, Power, Bias and Variance trade off, Multicollinearity, Z test / T Test, Right / Left skewed, Confounding variables
 ---
 
 #### 1. What is P-value?
