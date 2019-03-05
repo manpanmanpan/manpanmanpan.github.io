@@ -23,15 +23,19 @@ $$\text{click~through~probability} = \frac{\text{unique~visitors~who~click}}{\te
 ### Categories of summary metrics
 
 - Sums and Counts 
+
 e.g:  # users who visited page
 
 - Means, Medians and Percentiles
+
 e.g: mean age of users who completed a course or median latency of page load
 
 - Probabilities and Rates
+
 e.g: Probability has 0 or 1 outcome in each case , Rate has 0 or more
 
 - Ratios
+
 e.g: $\frac{P(revenue - generating~click)}{P(any~click)}$
 
 
@@ -62,7 +66,7 @@ We would divide each data point by the corresponding data point from a week ago.
 
 For example: 
 We want to track the latency of a video, that is how long it takes the video to load. 
-There are 5 summary metirc (Median, 80th, 85th, 90th, 99th percentile). How t0 choose summary metric?
+There are 5 summary metirc (Median, 80th, 85th, 90th, 99th percentile). How to choose summary metric?
 
 For retrospective analysis, we de-segment the data by different videos (look at the distribution of load time per video).
 
