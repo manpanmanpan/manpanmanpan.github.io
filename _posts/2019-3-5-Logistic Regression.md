@@ -64,7 +64,7 @@ $$ R_n(\beta) = \frac{1}{n}\sum_{i=1}^nl_i $$
 
 $$ Gradient: \frac{\partial R_n(\beta)}{\partial \beta} = \frac{1}{n}\sum_{i=1}^nx_i(p_i-y_i) = \frac{1}{n}X^T\gamma $$
 
-$X~~n*p$, $\gamma~~n*1$, $\gamma_i = p_i - y_i $.
+$$X~~n*p, \gamma~~n*1, \gamma_i = p_i - y_i $$
 
 ### 4. Newton-Raphson Method
 
