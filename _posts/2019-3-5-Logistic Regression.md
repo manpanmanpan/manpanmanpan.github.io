@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Logistic Regression, Gradient Descent
+title:      Logistic Regression
 subtitle:   
 date:       2019-03-06
 author:     Cassie Pan
