@@ -34,7 +34,7 @@ $$ logit(P(Y=1|X)) = log\frac{P(Y=1|X)}{1-P(Y=1|X)} = X^T\beta$$
 Y ~ Bernoulli (y, p)
 
 
-$ P(Y = y|x) = p^y(1-p)^{1-y} $
+$ P(Y = y|X) = p^y(1-p)^{1-y} $
 where $p = P(Y=1|X) = \frac{1}{1+e^{-x^T\beta}} = \frac{e^{x^T\beta}}{1+e^{x^T\beta}}$
 
 
@@ -52,7 +52,7 @@ $$ \sum_{i=1}^nl(x_i, y_i, \beta) = \sum_{i=1}^n-y_ix_i^T\beta + log(1+e^{x_i^T\
 
 For $x_i, y_i,$
 $l(y_i,x_i,\beta) = -y_ix_i^T\beta + log(1+e^{x_i^T\beta}) $
-where  $y_{i(1*1)}~~~ x_{i(p*1)} ~~~ \beta_{(p*1)}$
+where  $y_{i(1*1)} $ $ x_{i(p*1)}$  $ \beta_{(p*1)}$
 
 $$ \frac{\partial l}{\partial \beta} = -y_ix_i + \frac{e^{x_i^T\beta}x_i}{1+e^{x_i^T\beta}} = x_i(p-y_i)$$
 
