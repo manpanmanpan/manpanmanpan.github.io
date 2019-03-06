@@ -2,12 +2,12 @@
 layout:     post
 title:      Logistic Regression
 subtitle:   
-date:       2019-02-28
+date:       2019-03-06
 author:     Cassie Pan
 header-img: img/post-bg-rwd.jpg 
 catalog: true
 tags:
-    - Logistic Regression
+    - Logistic Regression, Gradient Descent
 ---
 
 ### Logistic Regression
