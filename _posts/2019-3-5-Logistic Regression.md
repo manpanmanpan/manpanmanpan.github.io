@@ -57,9 +57,10 @@ $$y_i~~(1*1),~x_i~~(p*1),~\beta~~(p*1)$$
 
 $$ \frac{\partial l}{\partial \beta} = -y_ix_i + \frac{e^{x_i^T\beta}x_i}{1+e^{x_i^T\beta}} = x_i(p-y_i)$$
 
-Then $\beta_{k+1} = \beta_k + \alpha * gradient $
+Then $$\beta_{k+1} = \beta_k + \alpha * gradient $$
 
 ##### Vectorized:
+
 $$R_n(\beta) = \frac{1}{n}\sum_{i=1}^nl_i$$
 
 $$ Gradient: \frac{\partial R_n(\beta)}{\partial \beta} = \frac{1}{n}\sum_{i=1}^nx_i(p_i-y_i) = \frac{1}{n}X^T\gamma $$
