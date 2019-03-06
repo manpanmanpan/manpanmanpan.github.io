@@ -49,7 +49,8 @@ $$ \sum_{i=1}^nl(x_i, y_i, \beta) = \sum_{i=1}^n-y_ix_i^T\beta + log(1+e^{x_i^T\
 
 ### 3. Gradient Descent
 
-For $x_i, y_i,$
+For $x_i, y_i$
+
 $$l(y_i,x_i,\beta) = -y_ix_i^T\beta + log(1+e^{x_i^T\beta}) $$
 
 $$y_i~~(1*1),~x_i~~(p*1),~\beta~~(p*1)$$
