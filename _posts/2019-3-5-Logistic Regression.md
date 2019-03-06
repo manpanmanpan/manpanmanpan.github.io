@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Logistic Regression
+title:      Logistic Regression, Gradient Descent
 subtitle:   
 date:       2019-03-06
 author:     Cassie Pan
@@ -57,7 +57,9 @@ $$y_i~~(1*1),~x_i~~(p*1),~\beta~~(p*1)$$
 
 $$ \frac{\partial l}{\partial \beta} = -y_ix_i + \frac{e^{x_i^T\beta}x_i}{1+e^{x_i^T\beta}} = x_i(p-y_i)$$
 
-Then $$\beta_{k+1} = \beta_k + \alpha * gradient $$
+Then 
+
+$$\beta_{k+1} = \beta_k + \alpha * gradient $$
 
 ##### Vectorized:
 
