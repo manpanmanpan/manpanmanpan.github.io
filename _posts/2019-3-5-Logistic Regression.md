@@ -33,8 +33,8 @@ $$ logit(P(Y=1|X)) = log\frac{P(Y=1|X)}{1-P(Y=1|X)} = X^T\beta$$
 
 Y ~ Bernoulli (y, p)
 
-$P(Y=y|X) = p^y(1-p)^{1-y}$
-where $p = P(Y=1|X) = \frac{1}{1+e^{-x^T\beta}} = \frac{e^{x^T\beta}}{1+e^{x^T\beta}}$
+$P(Y=y\midX) = p^y(1-p)^{1-y}$
+where $p = P(Y=1\midX) = \frac{1}{1+e^{-x^T\beta}} = \frac{e^{x^T\beta}}{1+e^{x^T\beta}}$
 
 
 We can use maximum likelihood method to estimate $\beta$.
