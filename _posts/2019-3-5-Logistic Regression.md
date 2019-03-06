@@ -18,7 +18,7 @@ tags:
 
 $$ S(z) = \frac{1}{1+e^{-z}} $$
 
-Let $ Z = X^T\beta$, then we have:
+Let $Z= X^T\beta$, then we have:
 
 $$ P(Y=1|X) = \frac{1}{1+e^{-X^T\beta}} = \frac{e^{X^T\beta}}{1+e^{X^T\beta}} $$
 
@@ -51,9 +51,9 @@ $$ \sum_{i=1}^nl(x_i, y_i, \beta) = \sum_{i=1}^n-y_ix_i^T\beta + log(1+e^{x_i^T\
 
 For $x_i, y_i,$
 $l(y_i,x_i,\beta) = -y_ix_i^T\beta + log(1+e^{x_i^T\beta}) $  where  
-$y_{i(1*1)}$ 
-$ x_{i(p*1)}$  
-$ \beta_{(p*1)}$
+$y_i(1*1)$ 
+$ x_i(p*1)$  
+$ \beta_(p*1)$
 
 $$ \frac{\partial l}{\partial \beta} = -y_ix_i + \frac{e^{x_i^T\beta}x_i}{1+e^{x_i^T\beta}} = x_i(p-y_i)$$
 
@@ -64,8 +64,8 @@ $$ R_n(\beta) = \frac{1}{n}\sum_{i=1}^nl_i $$
 
 $$ Gradient: \frac{\partial R_n(\beta)}{\partial \beta} = \frac{1}{n}\sum_{i=1}^nx_i(p_i-y_i) = \frac{1}{n}X^T\gamma $$
 
-where $X_{n*p}$ 
-$\gamma_{(n*1)}$ 
+where $X ~ n*p$ 
+$\gamma~(n*1)$ 
 $\gamma_i = p_i - y_i $
 
 ### 4. Newton-Raphson Method
