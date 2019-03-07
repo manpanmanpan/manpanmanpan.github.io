@@ -11,7 +11,7 @@ tags:
 ---
 #### 1. What is P-value?
 
-Assume that you observe a sample value, e.g. $\bar{x}$ = x, p value = probability under H<sub>0</sub> that you observe a sample as extreme as or more extreme than x.
+Assume that you observe a sample value, e.g. $\bar{x}$ = x, p value = probability under H<sub>0</sub> that you observe a sample as **extreme** as or more extreme than x.
     what constitutes "extreme" depends on the alternative hypothesus.
 For instance p value = P( $\bar{x}$ >= x) if $H_1 = \mu > \mu_0$
 
@@ -27,7 +27,7 @@ Type 1 Error = incorrectly rejecting the null hypothesis. (Probability of false 
 
 Type 2 Error = fail to reject null when you should have rejected the null hypothesis.(Probability of missed detection)
 
-Power is the probability of finding a difference between groups if one truly exists. It is the percentage chance that you will be able to reject the null hypothesis if it is really false.
+Power is the probability of finding a difference between groups if one truely exists. It is the percentage chance that you will be able to reject the null hypothesis if it is really false.
 
 Power Function: the power function of a test with rejection region $R$ is the function of $\theta \in \Theta_1$ defined as $ \beta(\theta) = P_{\theta}(X\in R)$.
 
@@ -35,6 +35,8 @@ Ideally,
 
 $$ \beta(\theta) = 0, if~ \theta \in \Theta_0$$
 $$\beta(\theta) = 1, if~ \theta \in \Theta_1$$
+
+Usually, it's hard to achieve, so we always minimize the type Ⅱ error after controlling the type I error.
 
 Notice,
 $$ \theta\in\Theta_0 ~~~~ \beta(\theta) = prob~of~type~I~error$$
@@ -71,3 +73,4 @@ Interpretation : We have 95% confident that the true value is between [L,R]
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551516293(1).jpg?raw=true)
 
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551936871(1).png?raw=true)
