@@ -71,7 +71,7 @@ $$X~~n*p, \gamma~~n*1, \gamma_i = p_i - y_i $$
 
 ### 4. Newton-Raphson Method
 
-Background of Newton Method:
+##### Background of Newton Method:
 
 From Taylor Expansion:
 
