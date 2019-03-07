@@ -31,7 +31,7 @@ $$ logit(P(Y=1|X)) = log\frac{P(Y=1|X)}{1-P(Y=1|X)} = X^T\beta$$
 
 ### 2. Cost Function
 
-Y ~ Bernoulli (y, p)
+$ Y \sim Bernoulli (p)$
 
 $P(Y=y\mid X) = p^y(1-p)^{1-y}$
 where $p = P(Y=1\mid X) = \frac{1}{1+e^{-x^T\beta}} = \frac{e^{x^T\beta}}{1+e^{x^T\beta}}$

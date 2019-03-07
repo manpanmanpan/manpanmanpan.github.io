@@ -155,4 +155,4 @@ $$\left( \begin{array}{c}
 \end{array}\right)
 $$
 
-Finnally, we get $$\hat{P_i} = \frac{y_i}{n}$$
+Finnally, we get $$\hat{P_i} = \frac{y_i}{n}$$.
