@@ -34,6 +34,7 @@ Power Function: the power function of a test with rejection region $R$ is the fu
 Ideally,
 
 $$ \beta(\theta) = 0, if~ \theta \in \Theta_0$$
+
 $$\beta(\theta) = 1, if~ \theta \in \Theta_1$$
 
 Usually, it's hard to achieve, so we always minimize the type Ⅱ error after controlling the type I error.
@@ -53,7 +54,7 @@ Pivot, a random variable $Q(X,θ)$ of $X$ and $θ$ is called a pivot if the dist
 
 Pivot:
 
-$$ X_1, X_2..... X_n \sim N(\mu, \sigma^2) $$
+$X_1, X_2..... X_n \sim N(\mu, \sigma^2) $
 
 (1) C.I for $\mu, \sigma^2$ known,  $\frac{\bar{x} - \mu}{\sigma/\sqrt{n}} \sim N(0,1)$
 
