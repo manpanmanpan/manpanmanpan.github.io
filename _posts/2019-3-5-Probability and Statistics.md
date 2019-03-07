@@ -156,3 +156,5 @@ $$\left( \begin{array}{c}
 $$
 
 Finnally, we get $$\hat{P_i} = \frac{y_i}{n}$$.
+
+ [Refrence](https://chunhanli.github.io/2019/02/23/Statistic_inference/)
