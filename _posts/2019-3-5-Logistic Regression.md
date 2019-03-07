@@ -7,7 +7,7 @@ author:     Cassie Pan
 header-img: img/post-bg-rwd.jpg 
 catalog: true
 tags:
-    - Logistic Regression, Gradient Descent
+    - Logistic Regression, Gradient Descent, Newton-Raphson Method
 ---
 
 ### Logistic Regression
