@@ -1,13 +1,13 @@
 ---
 layout:     post
 title:      Probability and Statistics
-subtitle:   P value, Power, CI
-date:       2019-02-28
+subtitle:   P value, Power, CI, Hypothesis Testing
+date:       2019-3-06
 author:     Cassie Pan
 header-img: img/post-bg-rwd.jpg 
 catalog: true
 tags:
-    - P value, Power, CI
+    - P value, Power, CI, Hypothesis Testing
 ---
 #### 1. What is P-value?
 
@@ -122,3 +122,35 @@ Then, we get our sample value, calculate P value. If the p value < $\alpha$, we 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551995331(1).jpg?raw=true)
 
 ##### Q. How will you test if a dice is fair or not?
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551997096.jpg?raw=true)
+
+
+
+By the way, we use the **Lagrange Multiplier** to get $\hat{p_j}$:
+
+$$ log(L) = y_1log(p_1) + y_2log(p_2) + y_3log(p_3) + y_4log(p_4) + y_5log(p_5) + y_6log(p_6) $$
+
+We want $min~log(L)$ subject to $ P_1 + P_2 +P_3+P_4+P_5+P_6-1 =0$.
+
+Define:
+
+$$ F = log(L) + \lambda(P_1 + P_2 +P_3+P_4+P_5+P_6-1) $$
+
+By solving:
+
+$$\left( \begin{array}{c}
+    \frac{\partial F}{\partial P_1}  \\
+    \frac{\partial F}{\partial P_2}  \\
+    ......\\
+    \frac{\partial F}{\partial \lambda}
+\end{array}\right)=
+\left( \begin{array}{c}
+    0  \\
+    0  \\
+    ......\\
+    0
+\end{array}\right)
+$$
+
+Finnally, we get $$\hat{P_i} = \frac{y_i}{n}$$
