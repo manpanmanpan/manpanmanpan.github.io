@@ -117,6 +117,8 @@ $$ \alpha (type~I~error) = P(\sum_{}{x_i} \ge 5~or~\sum_{}{x_i} \le 1 \mid H_0) 
 
 Then, we get our sample value, calculate P value. If the p value < $\alpha$, we reject $H_0$, if the P value > $\alpha$, we fail to reject $H_0$.
 
+**Notice**: Maximizing a likelihood function is equivalent to maximizing its natural logarithm. Because the natural logarithm log is a continuous convex function that is strictly increasing in the range of the likelihood function.
+
 #### 5.2 Asymptotic distribution of the LRT—simple H0
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551995331(1).jpg?raw=true)
@@ -131,11 +133,11 @@ By the way, we use the **Lagrange Multiplier** to get $\hat{p_j}$:
 
 $$ log(L) = y_1log(p_1) + y_2log(p_2) + y_3log(p_3) + y_4log(p_4) + y_5log(p_5) + y_6log(p_6) $$
 
-We want $min~log(L)$ subject to $ P_1 + P_2 +P_3+P_4+P_5+P_6-1 =0$.
+We want $max~log(L)$ subject to $ P_1 + P_2 +P_3+P_4+P_5+P_6-1 =0$.
 
 Define:
 
-$$ F = log(L) + \lambda(P_1 + P_2 +P_3+P_4+P_5+P_6-1) $$
+$$ F = log(L) - \lambda(P_1 + P_2 +P_3+P_4+P_5+P_6-1) $$
 
 By solving:
 
