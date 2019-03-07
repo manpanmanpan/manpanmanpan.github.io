@@ -40,6 +40,7 @@ $$\beta(\theta) = 1, if~ \theta \in \Theta_1$$
 Usually, it's hard to achieve, so we always minimize the type Ⅱ error after controlling the type I error.
 
 Notice,
+
 $$ \theta\in\Theta_0 ~~~~ \beta(\theta) = prob~of~type~I~error$$
 
 $$ \theta\in\Theta_1 ~~~~ 1- \beta(\theta) = prob~of~type~Ⅱ~error$$
