@@ -85,3 +85,11 @@ For AA testing, it would be great if we had experiments that changed the resolut
 Median and 80th percentile: not sensitive enough. They are not showing a change when we do make a change that we care about.
 
 So in this example, 85th percentile is a good choice of a metric that both robust and sensitive.
+
+## 4. Variability
+
+- Analytic Variability
+
+- Empirical Variability (Assume normal distribution)
+
+- Nonparametric 
