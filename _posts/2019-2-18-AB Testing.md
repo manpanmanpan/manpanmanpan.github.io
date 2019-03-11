@@ -93,3 +93,17 @@ So in this example, 85th percentile is a good choice of a metric that both robus
 - Empirical Variability (Assume normal distribution)
 
 - Nonparametric 
+
+
+## 5.  Choosing a unit of diversion
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/2746d79ac705202ef3ceb3690b2986f.png?raw=true)
+
+Three main considerations of choosing a unit of diversion:
+
+- Consistency
+
+- Ethical consideration
+
+- Variability (unit of analysis [denominator] VS  unit of diversion)
+
