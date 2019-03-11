@@ -133,7 +133,7 @@ By the way, we use the **Lagrange Multiplier** to get $\hat{p_j}$:
 
 $$ log(L) = y_1log(p_1) + y_2log(p_2) + y_3log(p_3) + y_4log(p_4) + y_5log(p_5) + y_6log(p_6) $$
 
-We want $min~log(L)$ subject to $ P_1 + P_2 +P_3+P_4+P_5+P_6-1 =0$.
+We want $max~log(L)$ subject to $ P_1 + P_2 +P_3+P_4+P_5+P_6-1 =0$.
 
 Define:
 
