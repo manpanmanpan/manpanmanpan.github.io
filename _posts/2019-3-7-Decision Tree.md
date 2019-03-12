@@ -21,14 +21,24 @@ tags:
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552342459(1).jpg?raw=true)
 
+#### Advantages and Disadvantages of Trees
+
+▲ Easier to explain 
+▲ More closely mirror humanndecision-making 
+▲ Trees can be displayed graphically, and are easily interpreted
+▲ Trees can easily handle qualitative predictors without the need to create dummy variables
+
+▼ Unfortunately, trees generally do not have the same level of predictive accuracy as some of the other regression and classification approaches
+▼ Additionally, trees can be very non-robust. A small change in the data can cause a large change in the final estimated tree
+
 
 ## 2. Bagging
 
-We bootstrap, by taking repeated samples from the (single) training data set. In this approach we generate B different bootstrapped training data sets. We then train our method on the bth bootstrapped training set in order to get $\hat{f}^{*b}(x)$, and finally average all the predictions, to obtain:
+We bootstrap, by taking repeated samples from the (single) training data set. In this approach we generate B different bootstrapped training data sets. We then train our method on the $b_th$ bootstrapped training set in order to get $\hat{f}^{*b}(x)$, and finally average all the predictions, to obtain:
 
 $$ \hat{f_{bag}(x)} = \frac{1}{B}\sum_{b=1}^B\hat{f}^{*b}(x) $$
 
-This is called bagging.
+This is called bagging. Each tree is built on a bootstrap data set, independent of the other trees. The number of trees B is not a critical parameter with bagging; Using a very large value of B will **not lead to overfitting**.
 
 ### 2.2 Out-of-Bag Error Estimation
 
@@ -51,6 +61,13 @@ Hence the predictions from the bagged trees will be highly correlated. Unfortuna
 as large of a reduction in variance as averaging many uncorrelated quantities.
 Random forests overcome this problem by forcing each split to consider only a subset of the predictors.
 
-As with bagging, random forests will not overfit if we increase
-B, so in practice we use a value of B sufficiently large for the error rate to
-have settled down.
+As with bagging, random forests will **not overfit** if we increase B.
+
+## 4. Boosting
+
+Boosting works in a similar way as Bagging, except that the trees are grown sequentially: each tree is grown using information from previously grown trees. Boosting does not involve bootstrap sampling; instead each
+tree is fit on a modified version of the original data set.
+
+Note that in boosting, the construction of each tree depends strongly on the trees that have already been grown.
+
+In boosting, because the growth of a particular tree takes into account the other trees that have already been grown, smaller trees are typically sufficient. Using smaller trees can **aid in interpretability** as well; for instance, using stumps leads to an **additive** model.
