@@ -2,7 +2,7 @@
 layout:     post
 title:      Tree Model
 subtitle:   Decision Tree, Random Forest, Bagging, Boosting
-date:       2019-3-11
+date:       2019-3-10
 author:     Cassie Pan
 header-img: img/post-bg-rwd.jpg 
 catalog: true
@@ -50,9 +50,6 @@ For Example, each bagged tree makes use of around two-thirds of the observations
 
 The resulting OOB error is a valid estimate of the test error for the bagged model, since the response for each observation is predicted using only the trees that were not fit using that observation. With B sufficiently large, OOB error is virtually equivalent to leave-one-out cross-validation error. The OOB approach for estimating the test error is particularly convenient when performing bagging on large data sets for which cross-validation would be computationally onerous.
 
-#### Any pros and cons in practical implementation?
-
-
 ## 3. Random Forests
 
 Random forests provide an improvement over bagged trees by way of a random small tweak that decorrelates the trees.
@@ -70,10 +67,6 @@ Random forests overcome this problem by forcing each split to consider only a su
 
 As with bagging, random forests will **not overfit** if we increase B.
 
-
-#### Any pros and cons in practical implementation?
-
-
 ## 4. Boosting
 
 Boosting works in a similar way as Bagging, except that the trees are grown sequentially: each tree is grown using information from previously grown trees. Boosting does not involve bootstrap sampling; instead each
@@ -82,8 +75,3 @@ tree is fit on a modified version of the original data set.
 Note that in boosting, the construction of each tree depends strongly on the trees that have already been grown.
 
 In boosting, because the growth of a particular tree takes into account the other trees that have already been grown, smaller trees are typically sufficient. Using smaller trees can **aid in interpretability** as well; for instance, using stumps leads to an **additive** model.
-
-
-#### Any pros and cons in practical implementation?
-
- 
