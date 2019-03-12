@@ -83,6 +83,10 @@ Note that in boosting, the construction of each tree depends strongly on the tre
 
 In boosting, because the growth of a particular tree takes into account the other trees that have already been grown, smaller trees are typically sufficient. Using smaller trees can **aid in interpretability** as well; for instance, using stumps leads to an **additive** model.
 
+### 4.1 AdaBoosting
+
+### 4.2 Gradient Boosting
+
 
 #### Any pros and cons in practical implementation?
 
