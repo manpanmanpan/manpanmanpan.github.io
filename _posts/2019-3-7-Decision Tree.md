@@ -24,11 +24,15 @@ tags:
 #### Advantages and Disadvantages of Trees
 
 ▲ Easier to explain 
+
 ▲ More closely mirror humanndecision-making 
+
 ▲ Trees can be displayed graphically, and are easily interpreted
+
 ▲ Trees can easily handle qualitative predictors without the need to create dummy variables
 
 ▼ Unfortunately, trees generally do not have the same level of predictive accuracy as some of the other regression and classification approaches
+
 ▼ Additionally, trees can be very non-robust. A small change in the data can cause a large change in the final estimated tree
 
 
@@ -36,7 +40,7 @@ tags:
 
 We bootstrap, by taking repeated samples from the (single) training data set. In this approach we generate B different bootstrapped training data sets. We then train our method on the $b_th$ bootstrapped training set in order to get $\hat{f}^{*b}(x)$, and finally average all the predictions, to obtain:
 
-$$ \hat{f_{bag}(x)} = \frac{1}{B}\sum_{b=1}^B\hat{f}^{*b}(x) $$
+$$ \hat{f}_{bag}(x) = \frac{1}{B}\sum_{b=1}^B\hat{f}^{*b}(x) $$
 
 This is called bagging. Each tree is built on a bootstrap data set, independent of the other trees. The number of trees B is not a critical parameter with bagging; Using a very large value of B will **not lead to overfitting**.
 
