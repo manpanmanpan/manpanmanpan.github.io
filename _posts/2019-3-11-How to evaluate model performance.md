@@ -86,6 +86,8 @@ Which is more important simply depends on what the costs of each error is.
 
 Receiver Operating Characteristic (ROC) curve shows how the recall vs precision relationship changes as we vary the threshold for identifying a positive in our model. The threshold represents the value above which a data point is considered in the positive class. By altering the threshold, we can try to achieve the right precision vs recall balance.
 
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552448521(1).png?raw=true)
+
 - Plots out the sensitivity and specificity for every possible decision rule cutoff between 0, 1.
 
 - X - axis: 1 - specificity (= false positive fraction = $\frac{FP}{FP+TN}$).
