@@ -16,27 +16,27 @@ tags:
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552427573(1).png?raw=true)
 
-##### Recall or Sensitivity or TPR (True Positive Rate):
+#### Recall or Sensitivity or TPR (True Positive Rate):
 
 Number of items correctly indentified as positive out of total true positive - $\frac{TP}{TP + FN}$
 
-#####Precision: 
+#### Precision: 
 
 Number of items correctly indentified as positive out of total items identified as positive - $\frac{TP}{TP+FP}$
 
-#####Specificity or TNR (True Negative Rate):
+#### Specificity or TNR (True Negative Rate):
 
 Number of items correctly identified as negative out of total negatives - $\frac{TN}{TN+FP}$
 
-#####False Positive Rate or Type I error:
+#### False Positive Rate or Type I error:
 
 Number of items wrongly identified as positive out of total true negatives - $\frac{FP}{FP+TN}$
 
-#####False Negative Rate or Type II error:
+#### False Negative Rate or Type II error:
 
 Number of items wrongly identified as negative out of total true positives - $\frac{FN}{FN+TP}$
 
-##### F1 Score:
+#### F1 Score:
 
 It is a harmonic mean of precision and recall given by- 
 $F1 = \frac{2*Precision*Recall}{Precision + Recall}$
@@ -54,7 +54,7 @@ $$The ~~Precision ~~and ~~Recall~~ Trade-off$$
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552434268(1).jpg?raw=true)
 
-##### Why F1 Score?
+#### Why F1 Score?
 
 In some situations, we want to maximize either recall or precision at the expense of the other metric. For example, in preliminary disease screening of patients for follow-up examinations, we would probably want a recall near 1.0.
 
@@ -65,11 +65,11 @@ In some situations, we want to maximize either recall or precision at the expens
 **Note**: We use the harmonic mean instead of a simple average because it punishes **extreme values**. Fi Score is sensitive to threshold value.
 
 
-##### When is precision more important?
+#### When is precision more important?
 
 For YouTube recommendations, false-negatives is less of a concern. Precision is better here.
 
-##### When is recall more important?
+####  When is recall more important?
 
 For rare cancer data modeling, anything that doesn't account for false-negatives is a crime. Recall is a better measure than precision.
 
