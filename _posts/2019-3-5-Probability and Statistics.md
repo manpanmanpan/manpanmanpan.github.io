@@ -15,6 +15,7 @@ Assume that you observe a sample value, e.g. $\bar{x}$ = x, p value = probabilit
     what constitutes "extreme" depends on the alternative hypothesus.
 For instance p value = P( $\bar{x}$ >= x) if $H_1 = \mu > \mu_0$
 
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552449630(1).jpg?raw=true)
 
 P-value is the probability of obtaining a result at least as extreme as the current one, assuming that the null hypothesis is true.
 
@@ -47,10 +48,15 @@ $$ \theta\in\Theta_1 ~~~~ 1- \beta(\theta) = prob~of~type~Ⅱ~error$$
 
 $\alpha$ (size of a test): A test with power function $\beta(\theta)$ is a size $\alpha$ test if $sup_{θ∈Θ_0}β(θ)\leα$.
 
-###### Why do we reject $H_0$ when P value $< ~ \alpha $ ?
+##### Why do we reject $H_0$ when P value $< ~ \alpha $ ?
 
+Let $T ~r.v$ (observe sample value) , $t$ (current value), $T_1$ (Critical value)
 
+From definition: We have 
+$$ P_{H_0}(T>t) = P~value $$
+$$ P_{H_0}(T>T_1) = \alpha$$
 
+if P value < $\alpha$, we can get $t> T_1$, so reject $H_0$.
 
 #### 3. Confidence Interval 
 
