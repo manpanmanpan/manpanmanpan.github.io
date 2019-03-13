@@ -13,11 +13,18 @@ tags:
 
 ## 1. Decision Tree
 
-### 1.1 ID3 
+### 1.1 ID3 (Classification)
 
-### 1.2 C4.5
+**Information Gain**: choose feature has max information gain as split condition.
 
-### 1.3. CART
+### 1.2 C4.5 (Regression and Classification)
+
+**Gain Ratio**: choose feature has max gain ratio as split condition.
+
+### 1.3. CART (Regression and Classification)
+
+**Gini Index**: choose a feature that minimizes the Gini index after division by that feature.
+Gini index is as a measure of deviation from perfect equality.
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552342459(1).jpg?raw=true)
 

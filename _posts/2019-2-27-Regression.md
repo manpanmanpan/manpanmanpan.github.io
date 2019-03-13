@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Statistic Cheat Sheet
+title:      Regression
 subtitle:   Regression
 date:       2019-02-27
 author:     Cassie Pan
@@ -29,7 +29,7 @@ Is the effect of X in reducing the variation in Y through linear regression.
 
 SSR is the reduction in uncertainty in predicting Y by utilizing the predictor X through a linear regression model.
 
-#### 4. $R^2$  &  $R_a^2$
+#### 4. $R^2$ ,  $R_a^2$
 $R^2$ = SSR/SSTO = 1 - SSE/SSTO
 
 $R^2$ is the proportional reduction of the total variation in Y by explaining Y using X through a linear regression model.
@@ -135,16 +135,25 @@ MSE (total error) is an unbiased estimator of the error variance. (MSE = SSE/n-p
 Variance refers to the amount by which your estimate of f(X) would change if we estimated it using a different training data set. Since the training data is used to ﬁt the statistical learning method, diﬀerent training data sets will result in a diﬀerent estimation.
 
 Criterion of model selection:
+
 $R^2$
+
 $R_a^2$
-Cp  (not far above p, smaller is better)
+
+$C_p$  (not far above p, smaller is better)
+
 AIC, BIC (smaller is better)
+
 Press (leave one out cross validation, smaller is better)
+
 press/n and MSPE are the measure of prediction ability of the model (out of sample)    
+
 MSPE based on the validation data is not much larger than SSE/n and press/n based on the training data indicates good predictive ability.
+
 Press not much larger than SSE means there is not severe overfitting by the model.
 
 Criterion of internal validation: SSE, Cp, Press
+
 Criterion of external validation: MSPE VS SSE/n , Press/n
 
 #### 12. Experimental design: Basic Principles 
@@ -169,7 +178,7 @@ Consider a researcher attempting to assess the effectiveness of drug X, from pop
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551515922(1).jpg?raw=true)
 
 For another example, we want to explore the impact of A font / B font to reading speed. There is a confounding variable : the education level of crowd.
-In order to get rid of that influence:
+In order to get rid of that influence (Blocking):
 1. Randomly sample some people, divide them into two groups according to the level of education (blocking)
 2. Randomly assign them to two types of fonts.
 
@@ -190,7 +199,11 @@ Rolling averages are a simple way to get rid of noise (e.g., randomness) out of 
 #### 17. Difference of AIC and BIC
 
 AIC and BIC are both penalized-likelihood criteria. Both are of the form “measure of fit + complexity penalty”:
-AIC = -2*ln(likelihood) + 2*p, and BIC = -2*ln(likelihood) + ln(N)*p,
+
+$$AIC = -2*ln(likelihood) + 2*p$$
+
+$$BIC = -2*ln(likelihood) + ln(N)*p$$
+
 where p = number of estimated parameters, N = sample size.
 Both information criteria are sometimes used for choosing best predictor subsets in regression and often used for comparing nonnested models. When several groups are being compared, the best model is generally the one that minimizes both AIC and BIC. However, AIC is susceptible to overfitting the data, whereas BIC is susceptible to underfitting the data. The reason is that they penalize the free parameters differently, i.e., 2*p in AIC, ln(N)*p in BIC.
 

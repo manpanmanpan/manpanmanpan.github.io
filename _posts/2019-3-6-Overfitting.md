@@ -90,3 +90,10 @@ Since ridge regression has a circular constraint with no sharp points, this inte
 
 
 The tuning parameter $\lambda$, used in the regularization techniques described above, controls the impact on bias and variance. As the value of $\lambda$ rises, it reduces the value of coefficients and thus reducing the variance. Till a point, this increase in $\lambda$ is beneficial as it is only reducing the variance(hence avoiding overfitting), without loosing any important properties in the data. But after certain value, the model starts loosing important properties, giving rise to bias in the model and thus underfitting. Therefore, the value of $\lambda$ should be carefully selected.
+
+
+#### What are the pros & cons of each of L1 / L2 regularization?
+
+- L1 regularization can't help with multicollinearity. It will just pick the feature with the largest correlation to the outcome (which isn't useful if you have an interest in estimating coefficients for all features which are strongly correlated with your target). L1 help with feature selection.
+
+- L2 regularization can't help with feature selection, but it help with multicollinearity. 
