@@ -48,7 +48,7 @@ $$ \theta\in\Theta_1 ~~~~ 1- \beta(\theta) = prob~of~type~Ⅱ~error$$
 
 $\alpha$ (size of a test): A test with power function $\beta(\theta)$ is a size $\alpha$ test if $sup_{θ∈Θ_0}β(θ)\leα$.
 
-##### Why do we reject $H_0$ when P value $< ~ \alpha $ ?
+#### Why do we reject $H_0$ when P value $< ~ \alpha $ ?
 
 Let $T ~r.v$ (observe sample value) , $t$ (current value), $T_1$ (Critical value)
 
