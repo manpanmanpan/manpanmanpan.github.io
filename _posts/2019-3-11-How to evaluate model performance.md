@@ -111,9 +111,7 @@ y = true label, p = predicted prob
 It takes into account the uncertainty of your prediction based on how much it varies from the actual label. In the worst case,let’s say you predicted 0.5 for all the observations. So log-loss will become -log(0.5) = 0.69. Hence, we can say that anything above 0.69 is a very poor model considering the actual probabilities.
 
 
-
-
-[Reference](https://medium.com/usf-msds/choosing-the-right-metric-for-evaluating-machine-learning-models-part-2-86d5649a5428)
+[Choosing the Right Metric for Evaluating Machine Learning Models](https://medium.com/usf-msds/choosing-the-right-metric-for-evaluating-machine-learning-models-part-2-86d5649a5428)
 
 #### Some tricks from the above link:
 
