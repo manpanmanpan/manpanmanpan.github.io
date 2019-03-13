@@ -44,20 +44,24 @@ $R_a^2$ = 1 - MSE/MSTO = 1 - n-1/n-p * SSE/SSTO  <= $R^2$
 
 $R_a^2$ may become decrease when adding more X variables into the model because the decrease in SSE may be more than offset by the loose of degrees of freedom in SSE.
 
+#### Why should you choose $R_a²$ over $R²$?
+
+An $R_a²$ will consider the marginal improvement added by an additional term in your model. So it will increase if you add the useful terms and it will decrease if you add less useful predictors. However, $R²$ increases with increasing terms even though the model is not actually improving.
+
 #### 5. Model diagnostics
-##### Assumptions of the simple linear model with normal errors:
-######  (1). Linearity of the regression relation  (residual vs predictor variables plot)
+#### Assumptions of the simple linear model with normal errors:
+######  (1) Linearity of the regression relation  (residual vs predictor variables plot)
 
-###### (2). Normality of the error terms  (QQ plot)
+###### (2) Normality of the error terms  (QQ plot)
 
-###### (3). Constant variance of error terms
+###### (3) Constant variance of error terms
  ( if the residual vs predictor variable plot (or residual vs fitted value plot) shows unequal dispersion along the horizontal xi_s, then this is an indicator of unequal variance)
 
 TESTS OF EQUAL VARIANCE ( Hartley Test, Brown-Forsythe Test, Bartlett Test)
 
 Unequal error variance remedial measures: Transformation of observation variable Y, ex, BOX-COX procedure; Weighted least squares.
 
-###### (4). Independence of the error terms  
+###### (4) Independence of the error terms  
 (if measurements are obtained in a time/space sequence, a residual sequence plot can be used to check whether the error terms are serially correlated)
 
 #### 6. Regression and Causation 
