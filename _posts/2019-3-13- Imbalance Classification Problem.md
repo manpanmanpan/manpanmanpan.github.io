@@ -1,13 +1,13 @@
 ---
 layout:     post
 title:      Imbalance Classification Problem
-subtitle:    
+subtitle:   Choose Metrics, Cost-Sensitive Learning, Resampling, Anomaly Detection, Ensemble Techniques
 date:       2019-3-13
 author:     Cassie Pan
 header-img: img/post-bg-rwd.jpg 
 catalog: true
 tags:
-    - 
+    - Choose Metrics, Cost-Sensitive Learning, Resampling, Anomaly Detection, Ensemble Techniques
 ---
 
 ### Imbalance Classification Example:
