@@ -56,3 +56,8 @@ In **more extreme** cases, it may be better to think of classification under the
 - In most cases, synthetic techniques like SMOTE  will outperform the conventional oversampling and undersampling methods.
 
 - For better results, we can use synthetic sampling methods like SMOTE along with advanced boosting methods like Gradient boosting and XG Boost.
+
+
+[Reference1](https://towardsdatascience.com/dealing-with-imbalanced-classes-in-machine-learning-d43d6fa19d2)
+
+[Reference2](https://www.analyticsvidhya.com/blog/2017/03/imbalanced-classification-problem/)
