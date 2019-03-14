@@ -59,22 +59,23 @@ The resulting OOB error is a valid estimate of the test error for the bagged mod
 
 #### Any pros and cons in practical implementation?
 
+
 - **Advantages**
 
-Improves stability & accuracy of machine learning algorithms
+  Improves stability & accuracy of machine learning algorithms
 
-Reduces variance
+  Reduces variance
 
-Overcomes overfitting
+  Overcomes overfitting
 
-Improved misclassification rate of the bagged classifier
+  Improved misclassification rate of the bagged classifier
 
-In noisy data environments bagging outperforms boosting
+  In noisy data environments bagging outperforms boosting
  
 
 - **Disadvantages**
 
-Bagging works only if the base classifiers are not bad to begin with. Bagging bad classifiers can further degrade performance.
+  Bagging works only if the base classifiers are not bad to begin with. Bagging bad classifiers can further degrade performance.
 
 
 ## 3. Random Forests
@@ -186,12 +187,12 @@ $h_t(x)$ is the output of weak classifier t. $\alpha_t$ is the weight applied to
 
 - **Advantages**:
 
-Very Simple to implement
+  Very Simple to implement
 
-Good generalization- suited for any kind of classification problem
+  Good generalization- suited for any kind of classification problem
 
-Not prone to overfitting
+  Not prone to overfitting
 
  - **Disadvantages**: 
 
- Sensitive to noisy data and outliers.
+   Sensitive to noisy data and outliers.
