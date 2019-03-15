@@ -34,6 +34,9 @@ For each step, when we track the metric # of job views drop, we can track:
 #### Break down Analysis (different dimension)
 - Country
 - Device (desktop job views/ mobie app job views(Android or iphone))
-- new user or old user
+- New user or old user
+- Lamguage
+- Geo Location
+- Browser
 
 #### Tracking issue
