@@ -88,14 +88,16 @@ So in this example, 85th percentile is a good choice of a metric that both robus
 
 ## 4. Variability
 
-- Analytic Variability
+- Analytic Variability ($SE_{pool}$)
 
 - Empirical Variability (Assume normal distribution)
 
-- Nonparametric 
+- Nonparametric (order)
 
 
-## 5.  Choosing a unit of diversion
+## 5.  Choosing a unit of diversion 
+
+##### Changing the unit of diversion will change the empirical estimate of variability
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/2746d79ac705202ef3ceb3690b2986f.png?raw=true)
 
@@ -105,5 +107,79 @@ Three main considerations of choosing a unit of diversion:
 
 - Ethical consideration
 
-- Variability (unit of analysis [denominator] VS  unit of diversion)
+- Variability (**unit of analysis [denominator] VS  unit of diversion**)
 
+## 6. Population and Cohort
+
+#### Choosing a cohort also changes your variability
+
+When to use a cohort instead of a population?
+
+- Looking for learning effect (user learning which is related to time)
+ 
+  There are 2 kinds of learning effect: Novelty effect or refuse changing
+
+- Examining user retention
+
+- Want to increase user activity
+
+- Anything requiring user to be established
+
+#### For Example:
+
+To see if changing structure of a exsiting course will improve the completion rate of the entire course.
+
+Unit of diversion: User ID
+
+In this case, we just want to make an experiment for users who start the course after our experiment start time, rather than the whole users who attended to the course.
+
+So the cohort only include users who started the lesson after the experiment was started in the experiment. It is a subset of the population. 
+
+Note: we have to split cohort into an experiment cohort and a control cohort.
+
+## 7. Power, $\alpha$ , $\beta$
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552621279(1).png?raw=true)
+
+
+## 8. Size and Duration
+
+We need to consider:
+
+When to do experiment (holiday)?
+
+Duration would be related to Fraction of your traffic:
+50% cookies run 10 days  VS  25% cookies run 20 days
+
+Split our size to run comparable experiment to detect if there are other reasons would impact our results, for example: holiday/ not holiday, weekends or weekdays (accounting for those other sources of variability). Or run different experiments for different level of the same feature. 
+
+
+## 9. Sanity Checks before analyzing results
+
+#### 9.1 Choosing invariant metrics (like population sizing metrics)
+
+For example, if we run an experiment to figure out :
+
+if change the order of coursrs in course list will affact which courses users eventually enroll in. **Unit of diversion is user id**. We should make sure # signed in users (should be randomized), # cookies, # events, CTR on "start now" button to courses list page, those are invariant metrics.
+
+Another example:
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552639064(1).png?raw=true)
+
+
+#### 9.2 Checking Invariants
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552639349.jpg?raw=true)
+
+##### How can we figure out whether the difference of total control and total experiment is within expectation?
+
+Given each cookie is randomly assigned to the control or experiment group with the prob 0.5, just like a fair coin, which is binomial distribution. So we can contruct Binomial confidence interval to figure out whether the difference is within expectation.
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552639892(1).jpg?raw=true)
+
+From the CI above, we find our $\hat{p}$ doesn't fall into the CI [0.4973, 0.5027], which means the difference isn't within expectation.
+
+Then, look at the day by day data again.
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552639948(1).jpg?raw=true)
+
+From above, we find there is no day obviously stands out as the hightest. So we can talk to the engineers to figure out if something was wrong with the experiment setup. Or to try slicing to see if one particular slice is weired, like by country, language or platform to see if one particular slice looks like it's causing the problem. Or checking the age of cookies in each group. Does one group tend to have more new cookies while the other group has older cookies.
