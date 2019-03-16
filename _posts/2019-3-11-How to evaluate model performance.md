@@ -56,13 +56,9 @@ $$The ~~Precision ~~and ~~Recall~~ Trade-off$$
 
 #### Why F1 Score?
 
-In some situations, we want to maximize either recall or precision at the expense of the other metric. For example, in preliminary disease screening of patients for follow-up examinations, we would probably want a recall near 1.0.
+In cases where we want to find an optimal blend of precision and recall we can combine the two metrics using what is called the F1 score.
 
-- We want to find all patients who actually have the disease 
-
-- And we can accept a low precision if the cost of the follow-up examination is not significant.
-
-**Note**: We use the harmonic mean instead of a simple average because it punishes **extreme values**. Fi Score is sensitive to threshold value.
+**Note**: We use the harmonic mean instead of a simple average because it punishes **extreme values**. F1 Score is sensitive to threshold value.
 
 
 #### When is precision more important?
@@ -72,6 +68,13 @@ For YouTube recommendations, false-negatives is less of a concern. Precision is 
 ####  When is recall more important?
 
 For rare cancer data modeling, anything that doesn't account for false-negatives is a crime. Recall is a better measure than precision.
+
+Also, in preliminary disease screening of patients for follow-up examinations, we would probably want a recall near 1.0.
+
+- We want to find all patients who actually have the disease 
+
+- And we can accept a low precision if the cost of the follow-up examination is not significant.
+
 
 The major difference is FP vs FN. YouTube recommendation don't place emphasis on FN but hospital clinical decisions must.
 Which is more important simply depends on what the costs of each error is.
