@@ -14,6 +14,9 @@ tags:
 
 When we come to the question, we should have a clear definition of the metric '# of job views', then consider how to get to the metric from the user's perspective. 
 
+
+#### Funnel Analysis
+
 Considering that you are a job seeker, you should do job search, then you get some results in some order after your quarry, then you click some jobs you are interested in. Finally, we will get the number of job views. 
 
 For each step, when we track the metric # of job views drop, we can track:
