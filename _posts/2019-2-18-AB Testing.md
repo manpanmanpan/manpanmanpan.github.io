@@ -218,7 +218,28 @@ We find all four weekend days are positive, which much higher than the CTR on ot
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552779468(1).jpg?raw=true)
 
-## 12. Multiple Metrics
+## 12. Analyzing Multiple Metrics
+
+Find an overall evaluation criteria
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552783515(1).jpg?raw=true)
 
+The Bonferroni method is likely to be too consercative, we recommend to use a more sophisticated method than Bonferoni, ideally one that takes into account the fact that the metrics are likely to be correlated.
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552806795(1).jpg?raw=true)
+
+In the above example, cause we have at least one false positive every time. So the FWER or the overall $\alpha = 1$, while FDR is 0.05, since most of the metrics that you are claiming have a significant difference actually do.
+
+If you are trying to detect significant changes arcoss a large number of metrics, FDR can be more lenient.
+
+## 13. Gotchas: Changes Over Time
+
+For Example: **Seasonality effects**
+
+Students, summer vacation causes internet changes; Holidays, Black friday causes shopping behavior will be changed.
+
+Capture these seasonal or event-driven impacts: Holdback. The idea is that you lanuch your change to everyone expect for a small holdback. A set of users, that don't get the change, so you can continue comparing their behavior to the control.
+
+Another example: **Novelty effect / change aversion**. Then, Cohort analysis can be helpful.
+
+Also, **budgets**. If you don't control for the budgets properly, the effect can change as you ramp up.
