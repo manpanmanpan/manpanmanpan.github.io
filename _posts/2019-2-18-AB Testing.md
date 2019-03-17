@@ -16,9 +16,9 @@ tags:
 ### click_through_rate VS click_through Probability
 
 
-$$\text{click through rate} = \frac{\text{number of clicks}}{\text{number of page views}} (\text{measure the usability}) $$
+$$\text{click through rate} = \frac{\text{number of clicks}}{\text{number of page views}} (\text{measure the usability})~~ Poisson~ Distribution $$
 
-$$\text{click through probability} = \frac{\text{unique visitors who click}}{\text{unique visitors  to page}} (\text{measure the total impact}) $$
+$$\text{click through probability} = \frac{\text{unique visitors who click}}{\text{unique visitors  to page}} (\text{measure the total impact})~~ Binomial~Distribution $$
 
 ### Categories of summary metrics
 
@@ -183,3 +183,42 @@ Then, look at the day by day data again.
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552639948(1).jpg?raw=true)
 
 From above, we find there is no day obviously stands out as the hightest. So we can talk to the engineers to figure out if something was wrong with the experiment setup. Or to try slicing to see if one particular slice is weired, like by country, language or platform to see if one particular slice looks like it's causing the problem. Or checking the age of cookies in each group. Does one group tend to have more new cookies while the other group has older cookies.
+
+## 10. Analyzing the results - Single Metric
+
+The result of a test is below:
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552776944(1).jpg?raw=true)
+
+### Effect size
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552777428(1).jpg?raw=true)
+We can see that the CI does not include zero, these result are statistically significant. It is unlikely that there was no real difference. BUt the CI does include the practical significance boundary 0.01, meaning that I can't be confident at the 95% level that the size of this effect is something that I care about.
+
+### Sign Test
+
+To do the sign test, we need to look at the day by day data again, and count the number of days where the CTR is higher in experiment group.
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552777947(1).jpg?raw=true)
+
+$$ two ~tail~ P~value =2* P(y \ge 9) = 0.4240$$
+
+So the sign test has no statistically significant.
+
+Sign test has lower power than effect size test, which is frequently the case for nonparametric tests. That's the price you pay for not making any assumptions.
+
+Need digging deeper: Weekends / Weekdays
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552778899(1).jpg?raw=true)
+
+We find all four weekend days are positive, which much higher than the CTR on other positive change days. This suggests that the change may be has a small effect or no effect during the week, but a larger effect on weekends. Then, we can calculate the effect size and sign test for weekdays and weekends separately.
+
+**Recommendation**: Not launching the experiment at this point. Instead dig deeper into why the change didn't affect weekday visitors.
+
+## 11. Gotchas: Simpson’s Paradox
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552779468(1).jpg?raw=true)
+
+## 12. Multiple Metrics
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552783515(1).jpg?raw=true)
+
