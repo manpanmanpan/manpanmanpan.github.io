@@ -177,6 +177,8 @@ Finnally, we get $$\hat{P_i} = \frac{y_i}{n}$$.
  [Refrence](https://chunhanli.github.io/2019/02/23/Statistic_inference/)
 
 
+##### Another way to test if a dice is fair or not:  Goodness of Fit Test
+
 ##### 6.3 Two-Sample T Tests
 
  **Independent samples**: (unpaired t-test)
@@ -188,8 +190,7 @@ Finnally, we get $$\hat{P_i} = \frac{y_i}{n}$$.
 ![image](https://cdn-images-1.medium.com/max/800/1*FV3K60xleq89RiP9LINVfg.png)
 For example:
 
-- Before-and-after observations on the same subjects (e.g. students’ diagnostic test
-results before and after a particular module or course).
+- Before-and-after observations on the same subjects (e.g. students’ diagnostic test results before and after a particular module or course).
 - A comparison of two different methods of measurement or two different treatments
 where the measurements/treatments are applied to the same subjects (e.g. blood
 pressure measurements using a stethoscope and a dynamap).
@@ -207,7 +208,7 @@ Chi-square test is used for categorical data and it can be used to estimate how 
 
 ![image](https://cdn-images-1.medium.com/max/800/1*Ah06mmtq_lVz3sI3GrQnKg.png)
 
-**The goodness-of-fit test**:
+**The goodness-of-fit test (Multinomial)** :
 Degree of freedom (df) = no. of categories(c)−1
 
 For example, if I want to buy a restaurant, the current owner gives me the dist of the number of customers each day: 10% of the customers come in Monday, 10% on Tu, 15% on W, 20% on Tr, 30% on F, 15% on S. They close on Sunday. Then I want to see how good the distribution that he's describing actually fits observed data.
