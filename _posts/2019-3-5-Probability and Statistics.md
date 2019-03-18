@@ -177,7 +177,7 @@ Finnally, we get $$\hat{P_i} = \frac{y_i}{n}$$.
  [Refrence](https://chunhanli.github.io/2019/02/23/Statistic_inference/)
 
 
-##### Another way to test if a dice is fair or not:  Goodness of Fit Test
+### Another way to test if a dice is fair or not:  Goodness of Fit Test
 
 ##### 6.3 Two-Sample T Tests
 
