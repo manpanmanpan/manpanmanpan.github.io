@@ -58,7 +58,16 @@ $$ P_{H_0}(T>T_1) = \alpha$$
 
 if P value < $\alpha$, we can get $t> T_1$, so reject $H_0$.
 
-#### 3. Confidence Interval 
+#### 3. Central Limit Theorem
+
+The Central Limit Theorem is used to help us understand the following facts regardless of whether the population distribution is normal or not:
+1. the mean of the sample means is the same as the population mean
+2. the standard deviation of the sample means is always equal to the standard error.
+3. the distribution of sample means will become increasingly more normal as the sample size increases.
+
+
+
+#### 4. Confidence Interval 
 
 To construct CI, we have to find the pivot.
 Pivot, a random variable $Q(X,θ)$ of $X$ and $θ$ is called a pivot if the distribution of $Q$ does not involve $\theta$.
@@ -79,17 +88,19 @@ Confidence interval provides a range of values which is likely to contain the po
 
 Interpretation : We have 95% confident that the true value is between [L,R]
 
-#### 4. Z test , T test difference 
+#### 5. Z test , T test difference 
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551516293(1).jpg?raw=true)
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551936871(1).png?raw=true)
 
-#### 5. Hypothesis Testing
+![image](https://cdn-images-1.medium.com/max/800/1*LlBltIwkHXx6CgncSB_Oiw.png)
+
+#### 6. Hypothesis Testing
 
 [Hypothesis Testing for Means & Proportions](http://sphweb.bumc.bu.edu/otlt/MPH-Modules/BS/BS704_HypothesisTest-Means-Proportions/BS704_HypothesisTest-Means-Proportions_print.html)
 
-#### 5.1 Likelihood Ratio Test
+##### 6.1 Likelihood Ratio Test
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551948361(1).jpg?raw=true)
 
@@ -125,7 +136,7 @@ Then, we get our sample value, calculate P value. If the p value < $\alpha$, we 
 
 **Notice**: Maximizing a likelihood function is equivalent to maximizing its natural logarithm. Because the natural logarithm log is a continuous convex function that is strictly increasing in the range of the likelihood function.
 
-#### 5.2 Asymptotic distribution of the LRT—simple H0
+##### 6.2 Asymptotic distribution of the LRT—simple H0
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551995331(1).jpg?raw=true)
 
@@ -164,3 +175,49 @@ $$
 Finnally, we get $$\hat{P_i} = \frac{y_i}{n}$$.
 
  [Refrence](https://chunhanli.github.io/2019/02/23/Statistic_inference/)
+
+
+##### 6.3 Two-Sample T Tests
+
+ **Independent samples**: (unpaired t-test)
+
+![image](https://cdn-images-1.medium.com/max/800/1*w-YboTzRz6BJXp3vCgVwLg.png)
+
+**Dependent samples** : (paired t-test)
+
+![image](https://cdn-images-1.medium.com/max/800/1*FV3K60xleq89RiP9LINVfg.png)
+For example:
+
+- Before-and-after observations on the same subjects (e.g. students’ diagnostic test
+results before and after a particular module or course).
+- A comparison of two different methods of measurement or two different treatments
+where the measurements/treatments are applied to the same subjects (e.g. blood
+pressure measurements using a stethoscope and a dynamap).
+
+For example 1, Let x = test score before the module, y = test score after the module To test the null hypothesis that the true mean difference is zero, the procedure is as follows:
+1. Calculate the difference (di = yi − xi) between the two observations on each pair, making sure you distinguish between positive and negative differences.
+2. Calculate the mean difference, $\bar{d}$.
+3. Calculate the standard deviation of the differences, sd, and use this to calculate the standard error of the mean difference, $SE(\bar{d} )= S_{d}/\sqrt{n}$
+4. Calculate the t-statistic, which is given by $T = \frac{\bar{d}}{SE(d)}$. Under the null hypothesis, this statistic follows a t-distribution with n − 1 degrees of freedom.
+5. Use tables of the t-distribution to compare your value for T to the $t_{n−1}$ distribution. This will give the p-value for the paired t-test.
+
+#### 6.4  Chi-square test: Categorical Data
+
+Chi-square test is used for categorical data and it can be used to estimate how closely the distribution of a categorical variable matches an expected distribution (the goodness-of-fit test), or to estimate whether two categorical variables are independent of one another (the test of independence).
+
+![image](https://cdn-images-1.medium.com/max/800/1*Ah06mmtq_lVz3sI3GrQnKg.png)
+
+**The goodness-of-fit test**:
+Degree of freedom (df) = no. of categories(c)−1
+
+For example, if I want to buy a restaurant, the current owner gives me the dist of the number of customers each day: 10% of the customers come in Monday, 10% on Tu, 15% on W, 20% on Tr, 30% on F, 15% on S. They close on Sunday. Then I want to see how good the distribution that he's describing actually fits observed data.
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552876533(1).jpg?raw=true)
+
+$$\chi^2 > \chi^2_{6-1} = 11.04$$
+So it is unlikely that this distribution is ture.
+
+**The test of independence**:
+Degree of freedom (df) = (rows−1)(columns−1)
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552875999(1).png?raw=true)
