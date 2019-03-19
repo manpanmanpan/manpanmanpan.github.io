@@ -157,12 +157,17 @@ Split our size to run comparable experiment to detect if there are other reasons
 
 ``` R
 ## Strategy: For a bunch of Ns, compute the z_star by achieving desired alpha, then
+
 ## compute what beta would be for that N using the acquired z_star. 
+
 ## Pick the smallest N at which beta crosses the desired value
 
 # Inputs:
+
 #   The desired alpha for a two-tailed test
+
 # Returns: The z-critical value
+
 get_z_star = function(alpha) {
   return(-qnorm(alpha / 2))
 }
