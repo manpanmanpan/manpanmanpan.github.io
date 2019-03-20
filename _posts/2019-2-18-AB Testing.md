@@ -155,7 +155,7 @@ Split our size to run comparable experiment to detect if there are other reasons
 
 ## Calculate the sample size
 
-```R
+```
 ## Strategy: For a bunch of Ns, compute the z_star by achieving desired alpha, then
 
 ## compute what beta would be for that N using the acquired z_star. 
@@ -172,9 +172,8 @@ get_z_star = function(alpha) {
   return(-qnorm(alpha / 2))
 }
 ```
-1 
 
-``` R
+```
 # Inputs:
 #   z-star: The z-critical value
 #   s: The standard error of the metric at N=1
@@ -188,7 +187,7 @@ get_beta = function(z_star, s, d_min, N) {
 ```
 
 
-```R
+```
 # Inputs:
 #   s: The standard error of the metric with N=1 in each group
 #   d_min: The practical significance level
@@ -212,7 +211,7 @@ required_size = function(s, d_min, Ns=1:200000, alpha=0.05, beta=0.2) {
 ```
 
 
-```R
+```
 # Example analytic usage
 # This is the example from Lesson 1, for which the online calculate gave 3,623
 # samples in each group
@@ -221,7 +220,8 @@ required_size = function(s, d_min, Ns=1:200000, alpha=0.05, beta=0.2) {
 # which is sqrt(p*(1-p)*(1/1 + 1/1))
 required_size(s=sqrt(0.1*0.9*2), d_min=0.02)
 ```
-```R
+
+```
 # Sizing: Example
 # Cookie-based diversionrequired_size(s=sqrt(0.1*0.9*2), d_min=0.02)
 # Since the standard error is proportional to 1/sqrt(N), s, or
