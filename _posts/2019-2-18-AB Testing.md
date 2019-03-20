@@ -155,7 +155,7 @@ Split our size to run comparable experiment to detect if there are other reasons
 
 ## Calculate the sample size
 
-``` R
+```R
 ## Strategy: For a bunch of Ns, compute the z_star by achieving desired alpha, then
 
 ## compute what beta would be for that N using the acquired z_star. 
@@ -172,6 +172,8 @@ get_z_star = function(alpha) {
   return(-qnorm(alpha / 2))
 }
 ```
+1 
+
 ``` R
 # Inputs:
 #   z-star: The z-critical value
@@ -184,6 +186,8 @@ get_beta = function(z_star, s, d_min, N) {
   return(pnorm(z_star * SE, mean=d_min, sd=SE))
 }
 ```
+
+
 ```R
 # Inputs:
 #   s: The standard error of the metric with N=1 in each group
@@ -206,6 +210,8 @@ required_size = function(s, d_min, Ns=1:200000, alpha=0.05, beta=0.2) {
   return(-1)
 }
 ```
+
+
 ```R
 # Example analytic usage
 # This is the example from Lesson 1, for which the online calculate gave 3,623
@@ -329,4 +335,8 @@ Another example: **Novelty effect / change aversion**. Then, Cohort analysis can
 Also, **budgets**. If you don't control for the budgets properly, the effect can change as you ramp up.
 
 
+
+##  Summary
+
+Nowadays it’s very common for companies to do A/B tests on web page versions, personalized recommendations and new features.
 
