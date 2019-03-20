@@ -142,7 +142,7 @@ Note: we have to split cohort into an experiment cohort and a control cohort.
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552621279(1).png?raw=true)
 
 
-## 8. Size and Duration
+## 8. Size，Duration，Exposure，Learning effect
 
 We need to consider:
 
@@ -152,6 +152,12 @@ Duration would be related to Fraction of your traffic:
 50% cookies run 10 days  VS  25% cookies run 20 days
 
 Split our size to run comparable experiment to detect if there are other reasons would impact our results, for example: holiday/ not holiday, weekends or weekdays (accounting for those other sources of variability). Or run different experiments for different level of the same feature. 
+
+- Duration: What’s the best time to run it? Students going back to college? Holidays? Weekend vs. weekdays?
+
+- Exposure: What fraction of traffic you want to expose the experiment to? Suggestion is take a small fraction, run multiple tests at the same time (different days: weekend, weekday, holiday).
+
+- Learning effect: When there’s a new change, in the beginning users may against the change or use the change a lot. But overtime, user behavior becomes stable, which is called plateau stage. The key thing to measure learning effect is time, but in reality you don’t have that much luxury of taking that much time to make a decision. Suggestion: run on a smaller group of users, for a longer period of time.
 
 ## Calculate the sample size
 
@@ -239,7 +245,7 @@ required_size(s=0.0445*sqrt(1000), d_min=0.015, Ns=seq(10, 500000, 100))
 ```
 
 
-## 9. Sanity Checks before analyzing results
+## 9. Sanity Checks before analyzing results (check if your invariant metrics have changed)
 
 #### 9.1 Choosing invariant metrics (like population sizing metrics)
 
@@ -268,6 +274,8 @@ Then, look at the day by day data again.
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552639948(1).jpg?raw=true)
 
 From above, we find there is no day obviously stands out as the hightest. So we can talk to the engineers to figure out if something was wrong with the experiment setup. Or to try slicing to see if one particular slice is weired, like by country, language or platform to see if one particular slice looks like it's causing the problem. Or checking the age of cookies in each group. Does one group tend to have more new cookies while the other group has older cookies.
+
+Somethimes, if sanity check failed, do not proceed. Instead,go analyze why your sanity check failed. You can do either: (1) retrospective analysis, or (2) look into if there’s learning effect.
 
 ## 10. Analyzing the results - Single Metric
 
@@ -303,6 +311,9 @@ We find all four weekend days are positive, which much higher than the CTR on ot
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1552779468(1).jpg?raw=true)
 
+If your hypothesis test and sign test does not agree,we should take Simpson's paradox into account.
+It is a trend appears in different groups of data but disappears or reverses when these groups are combined
+
 ## 12. Analyzing Multiple Metrics
 
 Find an overall evaluation criteria
@@ -329,9 +340,10 @@ Another example: **Novelty effect / change aversion**. Then, Cohort analysis can
 
 Also, **budgets**. If you don't control for the budgets properly, the effect can change as you ramp up.
 
-
+## [Udacity Project](https://docs.google.com/document/d/1KiayQoMsh4i7F7IZv-ZRAY_UL83WYWQZiBKJn62Sf5E/edit#)
 
 ##  Summary
 
 Nowadays it’s very common for companies to do A/B tests on web page versions, personalized recommendations and new features.
 
+[A Summary of Udacity A/B Testing Course](https://towardsdatascience.com/a-summary-of-udacity-a-b-testing-course-9ecc32dedbb1)
