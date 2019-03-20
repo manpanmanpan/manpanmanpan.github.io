@@ -157,16 +157,11 @@ Split our size to run comparable experiment to detect if there are other reasons
 
 ```
 ## Strategy: For a bunch of Ns, compute the z_star by achieving desired alpha, then
-
 ## compute what beta would be for that N using the acquired z_star. 
-
 ## Pick the smallest N at which beta crosses the desired value
-
 # Inputs:
-
 #   The desired alpha for a two-tailed test
-
-# Returns: The z-critical value
+#   Returns: The z-critical value
 
 get_z_star = function(alpha) {
   return(-qnorm(alpha / 2))
@@ -194,7 +189,7 @@ get_beta = function(z_star, s, d_min, N) {
 #   Ns: The sample sizes to try
 #   alpha: The desired alpha level of the test
 #   beta: The desired beta level of the test
-# Returns: The smallest N out of the given Ns that will achieve the desired
+#   Returns: The smallest N out of the given Ns that will achieve the desired
 #          beta. There should be at least N samples in each group of the experiment.
 #          If none of the given Ns will work, returns -1. N is the number of
 #          samples in each group.
