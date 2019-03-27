@@ -95,13 +95,21 @@ Receiver Operating Characteristic (ROC) curve shows how the recall vs precision 
 
 - X - axis: 1 - specificity (= false positive fraction = $\frac{FP}{FP+TN}$).
 
-- Y - axis: sensitivity (=true positive fraction = $\frac{TP}{YP+FN}$).
+- Y - axis: sensitivity (=true positive fraction = $\frac{TP}{FP+FN}$).
 
 - The best decision rule is high on recall/sensitivity (Y) and low on 1-specificity(X).
 
 - ROC-AUC score is independent of the threshold set for classification because it only considers the rank of each prediction and not its absolute value. The same is not true for F1 score which needs a threshold value in case of probabilities output.
 
 - When AUC is 0.7, it means there is 70% chance that model will be able to distinguish between positive class and negative class.
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/10f5aede83c0b525278edafb81cd566.png?raw=true)
+
+##  For ROC, the diagonal line y=x represents the stategy of randomly guessing a class
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1553674377(1).jpg?raw=true)
+
+
+
 
 ### 3. Log-Loss
 
