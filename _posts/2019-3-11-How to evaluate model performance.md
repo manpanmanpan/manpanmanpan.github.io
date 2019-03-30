@@ -108,9 +108,6 @@ Receiver Operating Characteristic (ROC) curve shows how the recall vs precision 
 ##  For ROC, the diagonal line y=x represents the stategy of randomly guessing a class
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1553674377(1).jpg?raw=true)
 
-
-
-
 ### 3. Log-Loss
 
 Log-loss is a measurement of accuracy that incorporates the idea of probabilistic confidence given by following expression for binary class:
