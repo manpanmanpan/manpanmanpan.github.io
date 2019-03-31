@@ -64,6 +64,10 @@ Unequal error variance remedial measures: Transformation of observation variable
 ###### (4) Independence of the error terms  
 (if measurements are obtained in a time/space sequence, a residual sequence plot can be used to check whether the error terms are serially correlated)
 
+##### Durbin Watson (DW) Test
+
+The Durbin Watson (DW) statistic is a test for autocorrelation in the residuals from a statistical regression analysis. The Durbin-Watson statistic will always have a value between 0 and 4. A value of 2.0 means that there is no autocorrelation detected in the sample. Values from 0 to less than 2 indicate positive autocorrelation and values from from 2 to 4 indicate negative autocorrelation.
+
 #### 6. Regression and Causation 
 Regression analysis by itself doesn’t imply cause and effect relation
 A strong regression relation neither implies ‘X causes Y’ nor implies ‘Y causes X’. It only means that there is a strong association between X and Y.
