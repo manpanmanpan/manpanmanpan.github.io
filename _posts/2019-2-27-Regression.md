@@ -129,6 +129,10 @@ On the other hand, omission of key X variables leads to biased fitted regression
 The goal of model selection is to choose a subset of X variables which balances between model variance and bias.      
 Achieves bias - variance trade-off.
 ##### Bias - Variance Trade off (model selection)
+
+![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1554353441(1).png?raw=true)
+
+
 [Balancing Bias and Variance](https://towardsdatascience.com/balancing-bias-and-variance-to-control-errors-in-machine-learning-16ced95724db)
 
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551515803(1).jpg?raw=true)

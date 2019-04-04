@@ -31,7 +31,80 @@ Proximity based methods:1) Cluster based methods 2)Distance based methods 3) Den
 Such as One-class SVM, Isolation Forest, …
 
 Reference:
-[Novelty and Outlier Detection](https://scikit-learn.org/stable/modules/outlier_detection.html)
+[Novelty and Outlier Detection](https://scikit-learn.org/stable/modules/outlier_detection.html) !!!
 
 [Introduction to Outlier Detection Methods](https://www.datasciencecentral.com/profiles/blogs/introduction-to-outlier-detection-methods)
 
+## 2. missing values
+
+- Should we even treat missing values is another important point to consider? If 80% of the values for a variable are missing then you may drop the variable instead of treating the missing values.
+- Deleting the observations: when your have sufficient data points and your delete will not introduce bias
+- Imputation with mean / median / mode or set default value
+- Imputation with some models: KNN, Mice etc.
+- Use other features to build a model to predict the missing part
+
+
+## 3. PCA
+
+Suppose we want to analyze a dataset with n observations on a set of p features. When p is very large, it is likely that none of the features alone will be informative since each just contain a very small fraction of the total information.  
+Each of the n observations lives in p-dimensional space, but these p dimensions are not equally interesting.  
+PCA seeks to **find a small number of dimensions** that are as interesting as possible, where the concept of ‘interesting’ is measured by the amount that the observations vary along each dimension.
+
+Each of the dimensions found by PCA is a linear combination of the p features. For instance, the first principal component is:
+$$ Z_{i1} = \phi_{11}x_{i1} + \phi_{21}x_{i2} + .... +\phi_{p1}x_{ip}$$
+
+subject to：$$\sum_{j=1}^{p}\phi_{j1}^2 = 1 $$
+
+The vector defines a direction in feature space along which the data vary the most.  
+
+If we project the n data points onto this direction, the projected values are the principal component scores.
+
+
+**Applications:**
+
+we can adapt regression, classification, and clustering methods by using the first K<< p principal component score vectors as features, which will lead to much less noisy results. (measure of Multicollinearity)
+
+Other applications include data compression: for example, we can take the first few principal components of image data to compress image files.
+
+**Limitation:**
+
+Sometime the variance of the data may not be a good measurement of our interest of the data. Because PCA choose the direction in feature space along which the data vary the most.  
+
+**Difference of PCA and LDA**
+
+- LDA is a supervised model, PCA is a unsupervised model
+
+- LDA reduces K to k-1, but PCA does not have the limitation.
+
+- LDA chooses the projection that has the best classification ability, but PCA choose the direction in feature space along which the data vary the most.  
+
+**Is orthogonal necessary in PCA?**
+
+Yes, because in PCA, we aim to select fewer components (than features) which can explain the maximum variance in the data set, and by doing orthogonal it will maximize the difference between variance captured by the component.
+
+**What will happen if you don’t rotate the components?**
+
+If we don’t rotate the components, the effect of PCA will diminish and we’ll have to select more number of components to **explain** variance in the data set.
+
+
+## 4. What cross validation technique would you use on time series data set?
+
+We will not use regular cross validation technique to deal with time series.
+
+In time series problem, traditional cross validation can be troublesome because there might be some pattern in year 4 or 5 which is not in year 3. Resampling the data set will separate these trends, and we might end up validation on past years, which is incorrect.
+ 
+Instead, Here is one way I will use forward chaining strategy with 5 fold as shown below:
+fold 1 : training [1], test [2]
+fold 2 : training [1 2], test [3]
+fold 3 : training [1 2 3], test [4]
+fold 4 : training [1 2 3 4], test [5]
+fold 5 : training [1 2 3 4 5], test [6]
+where 1,2,3,4,5,6 represents “year”.
+
+## 5.How is KNN different from k-means clustering?
+
+K-Nearest Neighbors is a supervised classification algorithm, while k-means clustering is an unsupervised clustering algorithm. 
+
+While the mechanisms may seem similar at first, what this really means is that in order for K-Nearest Neighbors to work, you need labeled data you want to classify an unlabeled point into (thus the nearest neighbor part). 
+
+K-means clustering requires only a set of unlabeled points and a threshold: the algorithm will take unlabeled points and gradually learn how to cluster them into groups by computing the mean of the distance between different points.
