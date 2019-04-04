@@ -14,6 +14,9 @@ tags:
 
 Least square principle is to fit the observed data by minimizing the sum of squared vertical deviations.
 
+[a bivariate problem as an example](https://are.berkeley.edu/courses/EEP118/current/derive_ols.pdf)
+
+
 #### 2. Residuals
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1551495156(1).jpg?raw=true)
 
@@ -220,3 +223,11 @@ AIC always has a chance of choosing too big a model, regardless of n. BIC has ve
 #### 18. Standard Deviation vs Standard error
 
 The standard error (SE) of a statistic (usually an estimate of a parameter) is the standard deviation of its sampling distribution or an estimate of that standard deviation. 
+
+
+#### 19. Disadvantages of linear regression
+
+- Linear regressions are sensitive to outliers.
+- Linear regressions are meant to describe linear relationships between variables. (However, this can be compensated by transforming some of the parameters with a log, square root, etc. transformation.)
+- Linear regression assumes that the data are independent.
+

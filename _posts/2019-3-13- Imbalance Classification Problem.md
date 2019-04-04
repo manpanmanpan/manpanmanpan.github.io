@@ -26,9 +26,12 @@ tags:
 Generally, this problem deals with the trade-off between recall (percent of truly positive instances that were classified as such) and precision (percent of positive classifications that are truly positive). In situations where we want to detect instances of a minority class, we are usually concerned more so with **recall** than precision, as in the context of detection, it is usually more costly to miss a positive instance than to falsely label a negative instance. Thus, when comparing approaches to imbalanced classification problems, consider using metrics beyond accuracy such as recall, precision, F1 Score and AUC-ROC.
 
 
-### 2. Cost-sensitive Learning
+### 2. Cost-sensitive Learning (Try Penalized Models)
 
 Cost-sensitive learning changes this, and uses a function C(p, t) that specifies the cost of misclassifying an instance of class t as class p. This allows us to penalize misclassifications of the minority class more heavily than we do with misclassifications of the majority class, in hopes that this increases the true positive rate. A common scheme for this is to have the cost equal to the inverse of the proportion of the data-set that the class makes up. This increases the penalization as the class size decreases.
+
+Try Penalized Models:
+Penalized classification imposes an additional cost on the model for making classification mistakes on the minority class during training. These penalties can bias the model to pay more attention to the minority class.
 
 ### 3. Resampling Techniques
 
