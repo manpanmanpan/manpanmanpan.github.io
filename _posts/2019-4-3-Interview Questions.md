@@ -101,10 +101,22 @@ fold 4 : training [1 2 3 4], test [5]
 fold 5 : training [1 2 3 4 5], test [6]
 where 1,2,3,4,5,6 represents “year”.
 
-## 5.How is KNN different from k-means clustering?
+## 5. How is KNN different from k-means clustering?
 
 K-Nearest Neighbors is a supervised classification algorithm, while k-means clustering is an unsupervised clustering algorithm. 
 
 While the mechanisms may seem similar at first, what this really means is that in order for K-Nearest Neighbors to work, you need labeled data you want to classify an unlabeled point into (thus the nearest neighbor part). 
 
 K-means clustering requires only a set of unlabeled points and a threshold: the algorithm will take unlabeled points and gradually learn how to cluster them into groups by computing the mean of the distance between different points.
+
+## 6. What’s the “kernel trick” and how is it useful?
+
+Kernel trick:
+Kernel functions can enable in higher-dimension spaces without explicitly calculating the coordinates of points within that dimension: instead, kernel functions compute the inner products between the images of all pairs of data in a feature space.
+
+Why it is useful:
+It can calculate the coordinates of higher dimensions while being computationally cheaper than the explicit calculation of said coordinates. Many algorithms can be expressed in terms of inner products. Using the kernel trick enables us effectively run algorithms in a high-dimensional space with lower-dimensional data.
+
+## 7. 
+
+
