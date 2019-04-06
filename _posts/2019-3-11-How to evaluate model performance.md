@@ -39,7 +39,7 @@ Number of items wrongly identified as negative out of total true positives - $\f
 #### F1 Score:
 
 It is a harmonic mean of precision and recall given by- 
-$F1 = \frac{2*Precision*Recall}{Precision + Recall}$
+$$F1 = \frac{2*Precision*Recall}{Precision + Recall}$$
 
 
 ### 1. Precision，Recall，F1 Score
@@ -107,6 +107,10 @@ Receiver Operating Characteristic (ROC) curve shows how the recall vs precision 
 
 ##  For ROC, the diagonal line y=x represents the stategy of randomly guessing a class
 ![image](https://github.com/manpanmanpan/manpanmanpan.github.io/blob/master/img/1553674377(1).jpg?raw=true)
+
+**Two ways to calculate AUC:**
+
+[AUC Calculation](https://blog.csdn.net/qq_22238533/article/details/78666436)
 
 ### 3. Log-Loss
 

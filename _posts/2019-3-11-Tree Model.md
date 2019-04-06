@@ -43,7 +43,7 @@ Gini index is as a measure of deviation from perfect equality.
 ▼ Additionally, trees can be very non-robust. A small change in the data can cause a large change in the final estimated tree
 
 
-## 2. Bagging
+## 2. Bagging (reduce the variance)
 
 We bootstrap, by taking repeated samples from the (single) training data set. In this approach we generate B different bootstrapped training data sets. We then train our method on the $b_th$ bootstrapped training set in order to get $\hat{f}^{*b}(x)$, and finally average all the predictions, to obtain:
 
@@ -71,6 +71,8 @@ The resulting OOB error is a valid estimate of the test error for the bagged mod
   Improved misclassification rate of the bagged classifier
 
   In noisy data environments bagging outperforms boosting
+
+  Not sensitive to outliers
  
 
 - **Disadvantages**
@@ -78,7 +80,7 @@ The resulting OOB error is a valid estimate of the test error for the bagged mod
   Bagging works only if the base classifiers are not bad to begin with. Bagging bad classifiers can further degrade performance.
 
 
-## 3. Random Forests
+### 2.3 Random Forests
 
 Random forests provide an improvement over bagged trees by way of a random small tweak that decorrelates the trees.
 
@@ -99,9 +101,9 @@ As with bagging, random forests will **not overfit** if we increase B.
 #### Any pros and cons in practical implementation?
 
 
-## 4. Boosting
+## 3. Boosting (reducing the bias)
 
-Boosting works in a similar way as Bagging, except that the trees are grown sequentially: each tree is grown using information from previously grown trees. Boosting does not involve bootstrap sampling; instead each
+Boosting works in a similar way as Bagging, except that the trees are grown **sequentially**: each tree is grown using information from previously grown trees. Boosting does not involve bootstrap sampling; instead each
 tree is fit on a modified version of the original data set.
 
 Note that in boosting, the construction of each tree depends strongly on the trees that have already been grown.
