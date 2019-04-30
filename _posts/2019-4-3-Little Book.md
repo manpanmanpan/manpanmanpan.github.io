@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Interview Questions
+title:      Little Book 
 subtitle:   
 date:       2019-04-03
 author:     Cassie Pan
@@ -117,6 +117,6 @@ Kernel functions can enable in higher-dimension spaces without explicitly calcul
 Why it is useful:
 It can calculate the coordinates of higher dimensions while being computationally cheaper than the explicit calculation of said coordinates. Many algorithms can be expressed in terms of inner products. Using the kernel trick enables us effectively run algorithms in a high-dimensional space with lower-dimensional data.
 
-## 7. 
+## 
 
 
