@@ -7,7 +7,7 @@ author:     Cassie Pan
 header-img: img/post-bg-rwd.jpg 
 catalog: true
 tags:
-    - ID3, C4.5, CART, Adaboosting, Gradient Boosting, Random Forest
+    - ID3, C4.5, CART, Ensemble Learning, Bagging, Random Forest, Boosting
 ---
 
 
