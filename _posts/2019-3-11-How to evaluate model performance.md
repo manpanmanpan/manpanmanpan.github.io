@@ -1,13 +1,13 @@
 ---
 layout:     post
 title:      How to evaluate model performance
-subtitle:   F1 score, ROC, AUC, Recall, Precision, Log-Loss
+subtitle:   F1 score, ROC, AUC, Recall, Precision, Log-Loss, KS
 date:       2019-3-11
 author:     Cassie Pan
 header-img: img/post-bg-rwd.jpg 
 catalog: true
 tags:
-    -  F1 score, ROC, AUC, Recall, Precision, Log-Loss
+    -  F1 score, ROC, AUC, Recall, Precision, Log-Loss, KS
 ---
 
 ### How to evaluate model performance?
