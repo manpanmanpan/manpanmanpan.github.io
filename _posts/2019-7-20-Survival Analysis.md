@@ -89,3 +89,5 @@ $$  H(t|x) = exp(x^T\beta)\int_{0}^t h_0(s)ds = exp(x^T\beta) H_0(t) $$
 
 
 Creating the survival curves at each customer level helps us in proactively creating a tailor made strategy for high-valued customers for different survival risk segments along the timeline.
+
+[Survival Analysis: Intuition & Implementation in Python](https://towardsdatascience.com/survival-analysis-intuition-implementation-in-python-504fde4fcf8e)
