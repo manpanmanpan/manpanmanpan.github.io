@@ -69,7 +69,11 @@ $$ {\hat{S(t)}} = \prod_{i: \ t_i \ \le \ t} \frac{n_i - d_i}{n_i} $$
 
 In this case, we are often interested in how covariates (features[customer’s gender, monthlyincome, days past due, balance etc.])impacts the survival probability function.
 
-In such cases, it is the conditional survival function $S(t|x) = P(T > t|x)$. Here x denotes the covariates / features. 
+In such cases, it is the conditional survival function. Here x denotes the covariates / features. 
+
+$$ S(t|x) = P(T>t|x)  $$
+
+
 
 **Harzard function:** 
 
