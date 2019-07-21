@@ -34,8 +34,9 @@ S(t) = 1 - F(t)= P(T ≥t); S(t) gives us the probability that the event has not
 
 The rate at which event is taking place, out of the surviving population at any given time t. In medical terms, we can define it as “out of the people who survived at time t, what is the rate of dying of those people”.
 
-$$ h(t) = [( S(t) -S(t + dt) )/dt] / S(t) $$
-$$ limit \ dt → 0 $$
+$$ h(t) = [( S(t) -S(t + dt) )/dt] / S(t) \   limit \ dt → 0 $$
+
+
 
 Note: 
 - Number of people surviving at t is S(t)*P and the number of people surviving at t+dt is S(t+dt)*P. Number of people died during dt is (S(t) -S(t + dt))*P. Instantaneous rate of people dying at time t is (S(t) -S(t + dt))*P/dt.
@@ -68,9 +69,11 @@ $$ {\hat{S(t)}} = \prod_{i: \ t_i \ \le \ t} \frac{n_i - d_i}{n_i} $$
 
 In this case, we are often interested in how covariates (features[customer’s gender, monthlyincome, days past due, balance etc.])impacts the survival probability function.
 
-In such cases, it is the conditional survival function **S(t|x) = P(T > t|x)**. Here x denotes the covariates / features. 
+In such cases, it is the conditional survival function $ S(t|x) = P(T > t|x)$. Here x denotes the covariates / features. 
 
-**Harzard function:** $ h(t|X = x) = h_0(t) exp(x^T\beta)$
+**Harzard function:** 
+
+$$ h(t|X = x) = h_0(t) exp(x^T\beta)$$
 
 - β is the vector of coeﬃcients of each covariate. 
 - The function $h_o(t)$ is called the baseline hazard function.
